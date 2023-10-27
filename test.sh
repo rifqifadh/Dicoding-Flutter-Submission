@@ -1,18 +1,21 @@
 #!/usr/bin/env bash
 
 # https://medium.com/@nocnoc/combined-code-coverage-for-flutter-and-dart-237b9563ecf8
+# ./test.sh --path /path/to/tests
 
 # remember some failed commands and report on exit
 error=false
 
 show_help() {
-    printf "usage: $0 [--help]
+    printf "usage: $0 [--help] [--path <path>]
 Tool for running all unit and widget tests with code coverage and automatically generated if lcov is installed.
 
 (run from root of repo)
 where:
     --help
         print this message
+    --path <path>
+        run tests only in the specified path
 "
     exit 1
 }
@@ -44,6 +47,35 @@ runTests () {
   fi
   cd - > /dev/null
 }
+
+# parse command line arguments
+while [[ $# -gt 0 ]]
+do
+    key="$1"
+
+    case $key in
+        --help)
+            show_help
+            ;;
+        --path)
+            path="$2"
+            shift
+            ;;
+        *)
+            # unknown option
+            ;;
+    esac
+    shift
+done
+
+# run tests
+if [ -n "$path" ]; then
+    runTests "$path" "$(pwd)"
+else
+    for dir in $(find . -type d -name "test"); do
+        runTests "$(dirname $dir)" "$(pwd)"
+    done
+fi
 
 runReport() {
     if [ -f "coverage/lcov.info" ] && ! [ "$TRAVIS" ]; then

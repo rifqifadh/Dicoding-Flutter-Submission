@@ -1,4 +1,4 @@
-import 'package:ditonton/common/state_enum.dart';
+import 'package:core/core.dart';
 import 'package:ditonton/presentation/provider/tv_series_more_notifier.dart';
 import 'package:ditonton/presentation/widgets/tv_series_card.dart';
 import 'package:flutter/material.dart';

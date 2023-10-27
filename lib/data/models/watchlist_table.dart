@@ -1,10 +1,9 @@
-import 'package:ditonton/common/watchlist_type.dart';
-import 'package:ditonton/domain/entities/movie_detail.dart';
+import 'package:core/core.dart';
 import 'package:ditonton/domain/entities/tv_series_detail.dart';
 import 'package:ditonton/domain/entities/watchlist.dart';
 import 'package:equatable/equatable.dart';
 
-class WatchlistTable extends Equatable {
+class WatchlistTable extends WatchlistTableInterface with EquatableMixin {
   final int id;
   final String? title;
   final String? posterPath;
@@ -27,17 +26,17 @@ class WatchlistTable extends Equatable {
     required this.type,
   });
 
-  factory WatchlistTable.fromMovieEntity(MovieDetail movie) => WatchlistTable(
-        id: movie.id,
-        title: movie.title,
-        posterPath: movie.posterPath,
-        overview: movie.overview,
-        nextEpisode: 0,
-        nextEpisodeToAir: '',
-        nextEpisodeName: '',
-        seasonNumber: 0,
-        type: WatchlistType.movie,
-      );
+  // factory WatchlistTable.fromMovieEntity(MovieDetail movie) => WatchlistTable(
+  //       id: movie.id,
+  //       title: movie.title,
+  //       posterPath: movie.posterPath,
+  //       overview: movie.overview,
+  //       nextEpisode: 0,
+  //       nextEpisodeToAir: '',
+  //       nextEpisodeName: '',
+  //       seasonNumber: 0,
+  //       type: WatchlistType.movie,
+  //     );
 
   factory WatchlistTable.fromTVSeriesEntity(TVSeriesDetail tvSeries) => WatchlistTable(
         id: tvSeries.id,

@@ -1,1 +1,1 @@
-enum WatchlistType { movie, tvSeries }
+// enum WatchlistType { movie, tvSeries }

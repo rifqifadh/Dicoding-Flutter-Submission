@@ -1,6 +1,6 @@
 
 import 'package:dartz/dartz.dart';
-import 'package:ditonton/common/failure.dart';
+import 'package:core/core.dart';
 import 'package:ditonton/data/datasources/watchlist_local_data_source.dart';
 import 'package:ditonton/domain/entities/watchlist.dart';
 import 'package:ditonton/domain/repositories/watchlist_repository.dart';

@@ -1,8 +1,8 @@
 
 
 import 'package:dartz/dartz.dart';
-import 'package:ditonton/common/failure.dart';
-import 'package:ditonton/common/state_enum.dart';
+import 'package:core/core.dart';
+
 import 'package:ditonton/domain/usecases/tv_series/get_tv_series_detail.dart';
 import 'package:ditonton/domain/usecases/tv_series/get_tv_series_recommendation.dart';
 import 'package:ditonton/domain/usecases/tv_series/get_watchlist_status_tv_series.dart';

@@ -24,6 +24,12 @@ dependencies:
   flutter:
     sdk: flutter
 
+  core:
+    path: core
+  about: 
+    path: features/about
+  movies:
+    path: features/movies
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -32,7 +38,6 @@ dependencies:
   provider: ^6.0.3
   dartz: ^0.10.0-nullsafety.2
   equatable: ^2.0.2
-  google_fonts: ^5.1.0
   flutter_rating_bar: ^4.0.0
   cached_network_image: ^3.3.0
   get_it: ^7.1.3

@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:ditonton/common/failure.dart';
+import 'package:core/core.dart';
 import 'package:ditonton/domain/entities/watchlist.dart';
 
 abstract class WatchlistRepository {
