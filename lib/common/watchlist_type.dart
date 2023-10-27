@@ -1,0 +1,1 @@
+enum WatchlistType { movie, tvSeries }

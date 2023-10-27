@@ -390,24 +390,11 @@ void main() {
     test('should return watch status whether data is found', () async {
       // arrange
       final tId = 1;
-      when(mockLocalDataSource.getMovieById(tId)).thenAnswer((_) async => null);
+      when(mockLocalDataSource.getWatchlistById(tId)).thenAnswer((_) async => null);
       // act
       final result = await repository.isAddedToWatchlist(tId);
       // assert
       expect(result, false);
-    });
-  });
-
-  group('get watchlist movies', () {
-    test('should return list of Movies', () async {
-      // arrange
-      when(mockLocalDataSource.getWatchlistMovies())
-          .thenAnswer((_) async => [testMovieTable]);
-      // act
-      final result = await repository.getWatchlistMovies();
-      // assert
-      final resultList = result.getOrElse(() => []);
-      expect(resultList, [testWatchlistMovie]);
     });
   });
 }
