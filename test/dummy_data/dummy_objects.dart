@@ -5,7 +5,6 @@ import 'package:ditonton/data/models/next_episode_to_air_model.dart';
 import 'package:ditonton/data/models/season_model.dart';
 import 'package:ditonton/data/models/tv_series_detail_model.dart';
 import 'package:ditonton/data/models/tv_series_model.dart';
-import 'package:ditonton/data/models/watchlist_table.dart';
 import 'package:ditonton/domain/entities/episode.dart';
 import 'package:ditonton/domain/entities/genre.dart';
 import 'package:ditonton/domain/entities/next_episode_to_air.dart';

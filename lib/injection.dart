@@ -1,30 +1,13 @@
-import 'package:ditonton/data/datasources/tv_series_local_data_source.dart';
-import 'package:ditonton/data/datasources/tv_series_remote_data_source.dart';
 import 'package:ditonton/data/datasources/watchlist_local_data_source.dart';
-import 'package:ditonton/data/repositories/tv_series_repository_impl.dart';
 import 'package:ditonton/data/repositories/watchlist_repository_impl.dart';
-import 'package:ditonton/domain/repositories/tv_series_repository.dart';
 import 'package:ditonton/domain/repositories/watchlist_repository.dart';
-import 'package:ditonton/domain/usecases/tv_series/get_airing_today_tv_series.dart';
-import 'package:ditonton/domain/usecases/tv_series/get_on_the_air_tv_series.dart';
-import 'package:ditonton/domain/usecases/tv_series/get_popular_tv_series.dart';
-import 'package:ditonton/domain/usecases/tv_series/get_top_rated_tv_series.dart';
-import 'package:ditonton/domain/usecases/tv_series/get_tv_series_detail.dart';
-import 'package:ditonton/domain/usecases/tv_series/get_tv_series_recommendation.dart';
-import 'package:ditonton/domain/usecases/tv_series/get_watchlist_status_tv_series.dart';
-import 'package:ditonton/domain/usecases/tv_series/remove_watchlist_tv_series.dart';
-import 'package:ditonton/domain/usecases/tv_series/save_watchlist_tv_series.dart';
-import 'package:ditonton/domain/usecases/tv_series/search_tv_series.dart';
 import 'package:ditonton/domain/usecases/watchlist/get_watchlist.dart';
-import 'package:ditonton/presentation/provider/search_tv_series_notifier.dart';
-import 'package:ditonton/presentation/provider/tv_series_detail_notifier.dart';
-import 'package:ditonton/presentation/provider/tv_series_list_notifier.dart';
-import 'package:ditonton/presentation/provider/tv_series_more_notifier.dart';
 import 'package:ditonton/presentation/provider/watchlist_notifier.dart';
 import 'package:movies/movies.dart';
 import 'package:core/core.dart';
 import 'package:http/http.dart' as http;
 import 'package:get_it/get_it.dart';
+import 'package:tvseries/tvseries.dart';
 
 final locator = GetIt.instance;
 

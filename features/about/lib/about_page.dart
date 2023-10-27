@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 class AboutPage extends StatelessWidget {
   static const ROUTE_NAME = '/about';
 
+  const AboutPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +40,7 @@ class AboutPage extends StatelessWidget {
           SafeArea(
             child: IconButton(
               onPressed: () => Navigator.pop(context),
-              icon: Icon(Icons.arrow_back),
+              icon: const Icon(Icons.arrow_back),
             ),
           )
         ],

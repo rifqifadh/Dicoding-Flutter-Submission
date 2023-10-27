@@ -15,7 +15,7 @@ class Watchlist extends Equatable {
   final int seasonNumber;
   final WatchlistType type;
 
-  Watchlist({
+  const Watchlist({
     required this.id,
     required this.title,
     required this.posterPath,

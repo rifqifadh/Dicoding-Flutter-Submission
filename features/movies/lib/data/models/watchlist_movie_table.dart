@@ -64,6 +64,7 @@ class WatchlistTable extends WatchlistTableInterface with EquatableMixin {
     );
   }
 
+  @override
   Map<String, dynamic> toJson() => {
         'id': id,
         'title': title,

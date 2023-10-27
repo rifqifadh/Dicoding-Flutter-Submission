@@ -3,7 +3,7 @@ import 'package:movies/data/models/genre_model.dart';
 import 'package:movies/domain/entities/movie_detail.dart';
 
 class MovieDetailResponse extends Equatable {
-  MovieDetailResponse({
+  const MovieDetailResponse({
     required this.adult,
     required this.backdropPath,
     required this.budget,

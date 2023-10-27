@@ -1,11 +1,10 @@
 import 'package:core/core.dart';
 import 'package:ditonton/common/utils.dart';
-import 'package:ditonton/common/watchlist_type.dart';
 import 'package:ditonton/presentation/provider/watchlist_notifier.dart';
-import 'package:movies/presentation/widget/movie_card_list.dart';
-import 'package:ditonton/presentation/widgets/tv_series_card.dart';
 import 'package:flutter/material.dart';
+import 'package:movies/presentation/widget/movie_card_list.dart';
 import 'package:provider/provider.dart';
+import 'package:tvseries/presentation/widgets/tv_series_card.dart';
 
 class WatchlistPage extends StatefulWidget {
   static const ROUTE_NAME = '/watchlist';
@@ -53,8 +52,7 @@ class _WatchlistPageState extends State<WatchlistPage>
               return ListView.builder(
                 itemBuilder: (context, index) {
                   final items = data.watchlistData[index];
-                  return Text('Hello');
-                  // return items.type == WatchlistType.movie ? MovieCard(items.toMovie()) : TVSeriesCard(items.toTVSeries());
+                  return items.type == WatchlistType.movie ? MovieCard(items.toMovie()) : TVSeriesCard(items.toTVSeries());
                 },
                 itemCount: data.watchlistData.length,
               );

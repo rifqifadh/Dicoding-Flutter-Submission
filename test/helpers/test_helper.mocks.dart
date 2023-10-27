@@ -21,7 +21,7 @@ import 'package:ditonton/data/models/watchlist_table.dart' as _i7;
 import 'package:ditonton/domain/entities/tv_series.dart' as _i12;
 import 'package:ditonton/domain/entities/tv_series_detail.dart' as _i13;
 import 'package:ditonton/domain/entities/watchlist.dart' as _i15;
-import 'package:ditonton/domain/repositories/tv_series_repository.dart' as _i10;
+import '../../features/tvseries/lib/domain/repositories/tv_series_repository.dart' as _i10;
 import 'package:ditonton/domain/repositories/watchlist_repository.dart' as _i14;
 import 'package:http/http.dart' as _i4;
 import 'package:mockito/mockito.dart' as _i1;
