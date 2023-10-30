@@ -1,0 +1,464 @@
+{
+    "page": 1,
+    "results": [
+      {
+        "adult": false,
+        "backdrop_path": "/9vkHfS9QFporrFCTqy1OarDZIs9.jpg",
+        "id": 85,
+        "name": "Postcards from Buster",
+        "original_language": "en",
+        "original_name": "Postcards from Buster",
+        "overview": "Postcards from Buster is a children's television series for children aged 6–12, containing both animation and live-action that originally aired on Public Broadcasting Service. It is a spin-off of the Arthur cartoon series. The show stars Arthur's best friend, 8-year-old rabbit Buster Baxter. Inspired by a 2003 episode of Arthur entitled \"Postcards from Buster\", the television series was produced by Cinar and Marc Brown Studios.\n\nIt first aired October 11, 2004, on PBS Kids Go!. Buster's interests include eating anything, reading comic books, and playing video games. Buster's personality is that of a fairly intelligent and curious child. He also believes that extraterrestrials are real. Buster's parents are divorced; in this series, Buster is seen with his father, Bo Baxter.\n\nArthur Read and many other characters from the PBS Kids Go! animated television series Arthur make cameo appearances in this series, and most episodes have an Arthur character playing a minor role. The series went through a hiatus between November 2008 and February 2012.",
+        "poster_path": "/7GZ3nM8Mod24ego7IdIi9hqSSsN.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          16
+        ],
+        "popularity": 9.099,
+        "first_air_date": "2004-10-11",
+        "vote_average": 8.274,
+        "vote_count": 82,
+        "origin_country": [
+          "US",
+          "CA"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/dZZSswKKICxp46MqSRfR029j5SI.jpg",
+        "id": 60,
+        "name": "Hardball with Chris Matthews",
+        "original_language": "en",
+        "original_name": "Hardball with Chris Matthews",
+        "overview": "Hardball with Chris Matthews is an American television talk show on MSNBC, broadcast weekdays at 7 PM ET hosted by Chris Matthews. It originally aired on now-defunct America's Talking and later CNBC. The current title was derived from a book Matthews wrote in 1988, Hardball: How Politics Is Played Told by One Who Knows the Game. Hardball is a talking-head style cable news show where the moderator advances opinions on a wide range of topics, focusing primarily on current political issues. These issues are discussed with a panel of guests that usually consists of political analysts and sometimes include politicians.\n\nIt also runs in a \"Best of\" format Saturday mornings at 5 AM.",
+        "poster_path": "/kEoxG0jgaMd5gDWxzfIgK3lmWE9.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          10763
+        ],
+        "popularity": 3.688,
+        "first_air_date": "",
+        "vote_average": 5.8,
+        "vote_count": 43,
+        "origin_country": [
+          "US"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/z8dpMdOvqDDvmf2t5amhZ4jHjhD.jpg",
+        "id": 55,
+        "name": "North of 60",
+        "original_language": "en",
+        "original_name": "North of 60",
+        "overview": "North of 60 is a mid-1990s Canadian television series depicting life in the sub-Arctic northern boreal forest. It first aired on CBC Television in 1992 and was syndicated around the world. It is set in the fictional community of Lynx River, a primarily Native-run town depicted as being in the Dehcho Region, Northwest Territories. Most of the characters were Dene. Some non-native characters had important roles: the restaurant/motel owner, the band manager, the nurse and the town's main RCMP officer. The show explored themes of Native poverty, alcoholism, cultural preservation and conflict over land settlements and natural resource exploitation. Originally somewhat light-hearted, it quickly became a more dramatic and ponderous series.",
+        "poster_path": "/twsoO8NCTitfW4My9wKz2p5yJou.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          18
+        ],
+        "popularity": 11.943,
+        "first_air_date": "1992-12-03",
+        "vote_average": 5.7,
+        "vote_count": 43,
+        "origin_country": [
+          "CA"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/1MHLZXNZcr8jHZQ6Ir3XN53XV21.jpg",
+        "id": 93878,
+        "name": "Criminal: Spain",
+        "original_language": "es",
+        "original_name": "Criminal: España",
+        "overview": "Psychological games abound between detectives and suspects in a tense interrogation room, where the search for answers sometimes comes at a moral cost.",
+        "poster_path": "/u04ur6vZj2ZxAW6mB3PMY1Yeyb6.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          80,
+          18
+        ],
+        "popularity": 14.605,
+        "first_air_date": "2019-09-20",
+        "vote_average": 6.507,
+        "vote_count": 74,
+        "origin_country": [
+          "ES"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/ifGVUbvl36CnY9mp4kquK8In1Rh.jpg",
+        "id": 118956,
+        "name": "DOTA: Dragon's Blood",
+        "original_language": "en",
+        "original_name": "DOTA: Dragon's Blood",
+        "overview": "After encounters with a dragon and a princess on her own mission, a Dragon Knight becomes embroiled in events larger than he could have ever imagined.",
+        "poster_path": "/oZKYGKGs21iGA18WM5b4xbcoXAJ.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          10765,
+          10759,
+          16
+        ],
+        "popularity": 56.155,
+        "first_air_date": "2021-03-25",
+        "vote_average": 7.894,
+        "vote_count": 371,
+        "origin_country": [
+          "US"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/cJKGfZHkMFtbVA4m2kwmdGk8uHp.jpg",
+        "id": 100,
+        "name": "I Am Not an Animal",
+        "original_language": "en",
+        "original_name": "I Am Not an Animal",
+        "overview": "I Am Not An Animal is an animated comedy series about the only six talking animals in the world, whose cosseted existence in a vivisection unit is turned upside down when they are liberated by animal rights activists.",
+        "poster_path": "/qG59J1Q7rpBc1dvku4azbzcqo8h.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          16,
+          35
+        ],
+        "popularity": 11.356,
+        "first_air_date": "2004-05-10",
+        "vote_average": 8.6,
+        "vote_count": 776,
+        "origin_country": [
+          "GB"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/fT0gXBCtyUoorE1TDC6dpsYr24i.jpg",
+        "id": 16684,
+        "name": "Dark Fate",
+        "original_language": "es",
+        "original_name": "Mariana de la Noche",
+        "overview": "Mariana de la Noche is a Mexican telenovela from 2003. Written by Delia Fiallo and produced by Salvador Mejia, it starred Angélica Rivera, Jorge Salinas, Alejandra Barros and César Évora.",
+        "poster_path": "/noEK1XucNeKEtpLYmpSaMNEDwfT.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          18,
+          10749
+        ],
+        "popularity": 17.116,
+        "first_air_date": "2003-10-20",
+        "vote_average": 7.2,
+        "vote_count": 166,
+        "origin_country": [
+          "MX"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/u75I8b1fOjKJ401d8fVxgZT4VL8.jpg",
+        "id": 11767,
+        "name": "Yu-Gi-Oh! Capsule Monsters",
+        "original_language": "en",
+        "original_name": "Yu-Gi-Oh! Capsule Monsters",
+        "overview": "Yugi, Joey, Téa, Tristan, and Yugi's grandfather Solomon are pulled into a world where Duel Monsters are real. They find monster capsules that they can use to summon monsters. However, in this strange new world, they battle monsters and when their own monsters are attacked, they feel the pain.",
+        "poster_path": "/uQshAcOLRi5o1KEeuXfMswA8JOE.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          16,
+          10759
+        ],
+        "popularity": 14.77,
+        "first_air_date": "2006-09-09",
+        "vote_average": 7.86,
+        "vote_count": 283,
+        "origin_country": [
+          "US"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": null,
+        "id": 6560,
+        "name": "Sherlock Holmes",
+        "original_language": "en",
+        "original_name": "Sherlock Holmes",
+        "overview": "The first American television series of Sherlock Holmes adventures aired in syndication in the fall of 1954. The 39 half-hour mostly original stories were produced by Sheldon Reynolds and filmed in France by Guild Films, starring Ronald Howard as Holmes and Howard Marion Crawford as Watson. Archie Duncan appeared in many episodes as Inspector Lestrade. Richard Larke, billed as Kenneth Richards, played Sgt. Wilkins in about fifteen episodes. The series' associate producer, Nicole Milinaire, was one of the first women to attain a senior production role in a television series.",
+        "poster_path": "/eFORQaQuldP89f8mQMaa71mmLqu.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          9648,
+          18
+        ],
+        "popularity": 17.416,
+        "first_air_date": "1954-10-18",
+        "vote_average": 7,
+        "vote_count": 10,
+        "origin_country": [
+          "FR"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/1fdFxZJR6HOfZTbbknrX7wmuB6E.jpg",
+        "id": 70,
+        "name": "This Hour Has 22 Minutes",
+        "original_language": "en",
+        "original_name": "This Hour Has 22 Minutes",
+        "overview": "This Hour Has 22 Minutes is a weekly Canadian television comedy that airs on CBC Television. Launched in 1993 during Canada's 35th general election, the show focuses on Canadian politics, combining news parody, sketch comedy and satirical editorials. Originally featuring Cathy Jones, Rick Mercer, Greg Thomey and Mary Walsh, the series featured satirical sketches of the weekly news and Canadian political events. The show's format is a mock news program, intercut with comic sketches, parody commercials and humorous interviews of public figures. The on-location segments are frequently filmed with slanted camera angles.\n\nIts full name is a parody of This Hour Has Seven Days, a CBC newsmagazine from the 1960s; the \"22 Minutes\" refers to the fact that a half-hour television program in Canada and the U.S. is typically 22 minutes long with eight minutes of commercials.\n\nJones and Walsh had previously worked together on the sketch comedy series CODCO, on which Thomey sometimes appeared as a guest. Mercer had been a notable young writer and performer on his own, touring several successful one-man shows of comedic political commentary.",
+        "poster_path": "/7sP1tv9e2wZzdOATVZxtZN3DUbi.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          10763,
+          35
+        ],
+        "popularity": 32.64,
+        "first_air_date": "2009-09-28",
+        "vote_average": 6.6,
+        "vote_count": 46,
+        "origin_country": [
+          "CA"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/wKilDrsuoh1bOKwhVCfrib6IazB.jpg",
+        "id": 2617,
+        "name": "Step by Step",
+        "original_language": "en",
+        "original_name": "Step by Step",
+        "overview": "Step by Step is an American television sitcom with two single parents, who spontaneously get married after meeting one another during a vacation, resulting in them becoming the heads of a large blended family",
+        "poster_path": "/4XMxYOxNvxEkfxUKhs8AoGBQiVD.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          35
+        ],
+        "popularity": 98.124,
+        "first_air_date": "1991-09-20",
+        "vote_average": 7.768,
+        "vote_count": 354,
+        "origin_country": [
+          "US"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/heotfhl53QuJw3YGfNFLhsfZs27.jpg",
+        "id": 30,
+        "name": "St. Elsewhere",
+        "original_language": "en",
+        "original_name": "St. Elsewhere",
+        "overview": "St. Elsewhere is an American medical drama television series that originally ran on NBC from October 26, 1982 to May 25, 1988. The series starred Ed Flanders, Norman Lloyd and William Daniels as teaching doctors at a lightly-regarded Boston hospital who gave interns a promising future in making critical medical and life decisions.",
+        "poster_path": "/mEfcA56iisaOfnK8FsY1sSE2wLu.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          18
+        ],
+        "popularity": 42.653,
+        "first_air_date": "1982-10-26",
+        "vote_average": 5.4,
+        "vote_count": 69,
+        "origin_country": [
+          "US"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/ijnwlEQtrPih5VJo0dt3IXcB4kN.jpg",
+        "id": 118321,
+        "name": "Allen v. Farrow",
+        "original_language": "en",
+        "original_name": "Allen v. Farrow",
+        "overview": "The story of one Hollywood's most notorious and public scandals: the accusation of sexual abuse against Woody Allen involving Dylan, his then 7-year-old daughter with Mia Farrow; their subsequent custody trial, the revelation of Allen’s relationship with Farrow’s daughter, Soon-Yi; and the controversial aftermath in the years that followed.",
+        "poster_path": "/jXC3tk2apwPxDpFHQaQH5ATDhlP.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          99
+        ],
+        "popularity": 8.128,
+        "first_air_date": "2021-02-21",
+        "vote_average": 6.574,
+        "vote_count": 34,
+        "origin_country": [
+          "US"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/6TrrLZ9HOBfLU9p07cmZYv1RuGd.jpg",
+        "id": 76977,
+        "name": "The Young Offenders",
+        "original_language": "en",
+        "original_name": "The Young Offenders",
+        "overview": "Coming-of-age drama about lovable rogues Conor and Jock as they navigate their awkward teenage years, hatching plans and adventures to help distract from their tough home lives and their inability to stay out of trouble at school.",
+        "poster_path": "/qFHtEVLzy2zeg1flGfvQhGdq0W0.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          80,
+          35
+        ],
+        "popularity": 7.546,
+        "first_air_date": "2018-02-09",
+        "vote_average": 7.522,
+        "vote_count": 23,
+        "origin_country": [
+          "IE"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/a6Ll18CIvtCkZpRNNOyWfof1GZ7.jpg",
+        "id": 78292,
+        "name": "Who is Who?",
+        "original_language": "es",
+        "original_name": "¿Quién es Quién?",
+        "overview": "Is a story about twin brothers, one rich and the other poor, who were separated at birth and reunited several years later by fate. However their polar opposite lives are switched. Through this journey they search and discover themselves.",
+        "poster_path": "/xzMQqTTmjofphjTdeFaPm16G6gp.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          10766,
+          35,
+          18
+        ],
+        "popularity": 20.8,
+        "first_air_date": "2015-10-26",
+        "vote_average": 8,
+        "vote_count": 106,
+        "origin_country": [
+          "US"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": null,
+        "id": 82576,
+        "name": "Indoor Boys",
+        "original_language": "en",
+        "original_name": "Indoor Boys",
+        "overview": "A new comedy series about two gay guys who don't leave the apartment, INDOOR BOYS follows Nate and Luke as they navigate their no-boundaries friendship.",
+        "poster_path": "/yRgyEgSYeyohnFqxVzdKfx8h5Di.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          35
+        ],
+        "popularity": 5.2,
+        "first_air_date": "2017-07-16",
+        "vote_average": 1,
+        "vote_count": 1,
+        "origin_country": [
+          "US"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/9lw64z4Yfn2J6kG3MdMbfbDD3Iz.jpg",
+        "id": 44949,
+        "name": "Husband for Rent aka Husband for Hire",
+        "original_language": "es",
+        "original_name": "Marido en Alquiler",
+        "overview": "Marido En Alquiler is a Spanish-language telenovela produced by United States-based television network Telemundo Studios, Miami and Brazilian Rede Globo. It is a remake of the Brazilian telenovela, Fina Estampa, although the working title for the project was Reina Madre.\n\nSonya Smith and Juan Soler star as the protagonists, marking the latter's debut with Telemundo after signing an exclusivity agreement with the network in 2013, with Maritza Rodríguez and Miguel Varoni star as the main antagonists.",
+        "poster_path": "/9mMGWB5RVN21Ez6CgnkIIIMCVj5.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          10766,
+          18
+        ],
+        "popularity": 17.919,
+        "first_air_date": "2013-07-10",
+        "vote_average": 7.7,
+        "vote_count": 97,
+        "origin_country": [
+          "US"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/b39z3QrGaIDzL5SNXSMtrHQWOcB.jpg",
+        "id": 225335,
+        "name": "Tour de France: Unchained",
+        "original_language": "fr",
+        "original_name": "Tour de France : Au cœur du peloton",
+        "overview": "Through tears and triumph, this series follows several cycling teams as they compete in the 2022 installment of the world's most grueling bike race.",
+        "poster_path": "/mnAWIXRJUReiDXAhyuv4T0bKzQF.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          99
+        ],
+        "popularity": 11.384,
+        "first_air_date": "2023-06-08",
+        "vote_average": 8.656,
+        "vote_count": 16,
+        "origin_country": [
+          "FR"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/7HLGW6fvAEJ0ZBdRQhqZoby9zGT.jpg",
+        "id": 1549,
+        "name": "WWE SmackDown",
+        "original_language": "en",
+        "original_name": "WWE SmackDown",
+        "overview": "The superstars of World Wrestling Entertainment's \"SmackDown\" brand collide each and every Friday on WWE Friday Night SmackDown.",
+        "poster_path": "/hRB3HnC3dyPX542Tcu9SWw2T8gT.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          10764
+        ],
+        "popularity": 47.291,
+        "first_air_date": "1999-04-29",
+        "vote_average": 7.4,
+        "vote_count": 142,
+        "origin_country": [
+          "US"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/1TwsoF3EpLt6HKsKmUxaNUwwKdL.jpg",
+        "id": 110637,
+        "name": "Overcoming heartbreak",
+        "original_language": "es",
+        "original_name": "Vencer el Desamor",
+        "overview": "Four women of different ages and social strata are forced to live together under the same roof. At first, the coexistence between them is complicated and tense due to their different visions and ways of facing life, but little by little the sisterhood and solidarity prevail when realizing the peculiar bond that exists between them: each one has suffered, in one or otherwise, the absence and abandonment of their respective partners.",
+        "poster_path": "/ntVTYZ5dCbGEwuQoMredNKT8Neq.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          10766,
+          18
+        ],
+        "popularity": 14.155,
+        "first_air_date": "2020-10-12",
+        "vote_average": 7.6,
+        "vote_count": 226,
+        "origin_country": [
+          "MX"
+        ]
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/geT0M5pu8kU5yVmRDGnnzikoftO.jpg",
+        "id": 4638,
+        "name": "Impact Wrestling",
+        "original_language": "en",
+        "original_name": "Impact Wrestling",
+        "overview": "IMPACT WRESTLING offers a unique style of wrestling that features a blend of the traditional with high flying athleticism and cutting edge action. IMPACT's roster includes the biggest names in wrestling today, and the hottest new stars in the sport.",
+        "poster_path": "/8t8LqBGy1F3Rqprj8JDJjg6rAWp.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          10759,
+          18,
+          9648
+        ],
+        "popularity": 28.861,
+        "first_air_date": "2004-06-04",
+        "vote_average": 7.5,
+        "vote_count": 52,
+        "origin_country": [
+          "US"
+        ]
+      }
+    ],
+    "total_pages": 2,
+    "total_results": 40
+  }
