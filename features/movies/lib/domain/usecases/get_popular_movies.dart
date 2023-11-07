@@ -1,5 +1,6 @@
-import 'package:dartz/dartz.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:core/core.dart';
+import 'package:dartz/dartz.dart';
 import 'package:movies/domain/entities/movie.dart';
 import 'package:movies/domain/repositories/movie_repository.dart';
 

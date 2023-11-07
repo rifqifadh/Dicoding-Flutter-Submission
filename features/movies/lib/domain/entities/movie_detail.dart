@@ -44,4 +44,20 @@ class MovieDetail extends Equatable {
         voteAverage,
         voteCount,
       ];
+
+
+  factory MovieDetail.empty() => const MovieDetail(
+        adult: false,
+        backdropPath: '',
+        genres: [],
+        id: 0,
+        originalTitle: '',
+        overview: '',
+        posterPath: '',
+        releaseDate: '',
+        runtime: 0,
+        title: '',
+        voteAverage: 0,
+        voteCount: 0,
+      );
 }

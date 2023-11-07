@@ -14,37 +14,6 @@ final locator = GetIt.instance;
 void init() {
   // provider
   locator.registerFactory(
-    () => MovieListNotifier(
-      getNowPlayingMovies: locator(),
-      getPopularMovies: locator(),
-      getTopRatedMovies: locator(),
-    ),
-  );
-  locator.registerFactory(
-    () => MovieDetailNotifier(
-      getMovieDetail: locator(),
-      getMovieRecommendations: locator(),
-      getWatchListStatus: locator(),
-      saveWatchlist: locator(),
-      removeWatchlist: locator(),
-    ),
-  );
-  locator.registerFactory(
-    () => MovieSearchNotifier(
-      searchMovies: locator(),
-    ),
-  );
-  locator.registerFactory(
-    () => PopularMoviesNotifier(
-      locator(),
-    ),
-  );
-  locator.registerFactory(
-    () => TopRatedMoviesNotifier(
-      getTopRatedMovies: locator(),
-    ),
-  );
-  locator.registerFactory(
     () => WatchlistNotifier(
       getWatchlist: locator(),
     ),
@@ -76,9 +45,27 @@ void init() {
     ),
   );
 
-  locator.registerFactory(
-    () => SearchTVSeriesNotifier(searchTVSeries: locator())
-  );
+  locator
+      .registerFactory(() => SearchTVSeriesNotifier(searchTVSeries: locator()));
+
+  locator.registerFactory(() => SearchBloc(locator()));
+
+  locator.registerFactory(() => MovieDetailBloc(
+        getMovieDetail: locator(),
+        getMovieRecommendations: locator(),
+        getWatchListStatus: locator(),
+        saveWatchlist: locator(),
+        removeWatchlist: locator(),
+      ));
+
+  locator
+      .registerFactory(() => TopRatedMoviesBloc(getTopRatedMovies: locator()));
+  locator.registerFactory(() => PopularMoviesBloc(getPopularMovies: locator()));
+  locator.registerFactory(() => MovieListBloc(
+        getNowPlayingMovies: locator(),
+        getPopularMovies: locator(),
+        getTopRatedMovies: locator(),
+      ));
 
   // use case
   locator.registerLazySingleton(() => GetNowPlayingMovies(locator()));
@@ -116,8 +103,7 @@ void init() {
     ),
   );
   locator.registerLazySingleton<WatchlistRepository>(
-    () => WatchlistRepositoryImpl(localDataSource: locator())
-  );
+      () => WatchlistRepositoryImpl(localDataSource: locator()));
 
   // data sources
   locator.registerLazySingleton<MovieRemoteDataSource>(

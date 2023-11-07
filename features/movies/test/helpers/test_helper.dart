@@ -7,7 +7,11 @@ import 'package:movies/movies.dart';
   MovieRepository,
   MovieRemoteDataSource,
   MovieLocalDataSource,
+  GetPopularMovies,
+  GetNowPlayingMovies,
+  GetTopRatedMovies,
   DatabaseHelper,
+  SearchMovies
 ], customMocks: [
   MockSpec<http.Client>(as: #MockHttpClient)
 ])
