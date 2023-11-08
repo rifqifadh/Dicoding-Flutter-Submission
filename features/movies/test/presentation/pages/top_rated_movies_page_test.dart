@@ -7,8 +7,6 @@ import 'package:movies/movies.dart';
 import '../../dummy_data/dummy_object.dart';
 
 class MockTopRatedMoviesBloc extends Mock implements TopRatedMoviesBloc {}
-class MockTopRatedMoviesEvent extends Mock implements TopRatedMoviesEvent {}
-class MockTopRatedMovieState extends Mock implements TopRatedMoviesState {}
 
 void main() {
   late TopRatedMoviesBloc mockBloc;
