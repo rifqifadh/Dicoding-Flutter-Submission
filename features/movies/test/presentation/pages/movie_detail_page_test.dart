@@ -1,6 +1,4 @@
-import 'dart:io';
 
-import 'package:bloc_test/bloc_test.dart';
 import 'package:core/core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mocktail/mocktail.dart';
@@ -14,19 +12,11 @@ import '../../dummy_data/dummy_object.dart';
 
 class MockMovieDetailBloc extends Mock implements MovieDetailBloc {}
 
-class MockMovieDetailEvent extends Fake implements MovieDetailEvent {}
-
-class MockMovieDetailState extends Fake implements MovieDetailState {}
-
-class MockHttpClient extends Mock implements HttpClient {}
-
 void main() {
   late MovieDetailBloc mockBloc;
-  // late HttpClient httpClient;
 
   setUp(() {
     mockBloc = MockMovieDetailBloc();
-    // httpClient = MockHttpClient();
   });
 
   Widget _makeTestableWidget(Widget body) {
