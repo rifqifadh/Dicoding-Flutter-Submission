@@ -6,10 +6,6 @@ import 'package:core/core.dart';
 part 'search_event.dart';
 part 'search_state.dart';
 
-EventTransformer<T> debounce<T>(Duration duration) {
-  return (events, mapper) => events.debounceTime(duration).flatMap(mapper);
-}
-
 class SearchBloc extends Bloc<SearchEvent, SearchState> {
   final SearchMovies _searchMovies;
 

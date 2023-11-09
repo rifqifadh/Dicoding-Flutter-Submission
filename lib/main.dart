@@ -31,17 +31,15 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => di.locator<TVSeriesDetailNotifier>(),
         ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<SearchTVSeriesNotifier>(),
-        ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<TVSeriesMoreNotifier>(),
-        ),
         BlocProvider(create: (_) => di.locator<SearchBloc>()),
         BlocProvider(create: (_) => di.locator<MovieDetailBloc>()),
         BlocProvider(create: (_) => di.locator<TopRatedMoviesBloc>()),
         BlocProvider(create: (_) => di.locator<PopularMoviesBloc>()),
         BlocProvider(create:(context) => di.locator<MovieListBloc>()),
+        BlocProvider(create:(context) => di.locator<SearchTVSeriesBloc>()),
+        BlocProvider(create:(context) => di.locator<SearchTVSeriesBloc>()),
+        BlocProvider(create:(context) => di.locator<TVSeriesMoreBloc>()),
+        BlocProvider(create:(context) => di.locator<TVSeriesDetailBloc>()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

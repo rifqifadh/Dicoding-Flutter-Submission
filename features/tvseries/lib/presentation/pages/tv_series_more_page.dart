@@ -1,7 +1,6 @@
-import 'package:core/core.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:tvseries/presentation/provider/tv_series_more_notifier.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tvseries/presentation/bloc/tv_series_more/tv_series_more_bloc.dart';
 import 'package:tvseries/presentation/widgets/tv_series_card.dart';
 
 enum TVSeriesMoreType { popular, topRated, onTheAir, airingToday }
@@ -39,10 +38,7 @@ class _TVSeriesMorePageState extends State<TVSeriesMorePage> {
 
   @override
   void initState() {
-    Future.microtask(() {
-      Provider.of<TVSeriesMoreNotifier>(context, listen: false)
-        .fetchTVSeries(widget.type);
-    });
+    BlocProvider.of<TVSeriesMoreBloc>(context).add(OnInitialFetchTVSeriesMore(widget.type));
     super.initState();
   }
 
@@ -55,26 +51,35 @@ class _TVSeriesMorePageState extends State<TVSeriesMorePage> {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Consumer<TVSeriesMoreNotifier>(
-            builder: (context, data, child) {
-              if (data.state == RequestState.Loading) {
+          child: 
+          BlocBuilder<TVSeriesMoreBloc, TVSeriesMoreState>(
+            builder: (context, state) {
+              if (state is TVSeriesMoreLoading) {
                 return const Center(
                   child: CircularProgressIndicator(),
                 );
-              } else if (data.state == RequestState.Loaded) {
+              } else if (state is TVSeriesMoreLoaded) {
                 return ListView.builder(
                   itemBuilder: (context, index) {
-                    final tvSeries = data.tvSeriesList[index];
+                    final tvSeries = state.tvSeries[index];
                     return TVSeriesCard(tvSeries);
                   },
-                  itemCount: data.tvSeriesList.length,
+                  itemCount: state.tvSeries.length,
                 );
-              } else {
-                return Center(
-                  key: const Key('error_message'),
-                  child: Text(data.message),
-                );
-              }
+              } else if (state is TVSeriesMoreError) {
+              return Center(
+                key: const Key('error_message'),
+                child: Text(state.message),
+              );
+            } else {
+              return Column(
+                children: <Widget>[
+                  Expanded(
+                    child: Container(),
+                  ),
+                ],
+              );
+            }
             },
           ),
           ),

@@ -22,7 +22,6 @@ class MovieDetailState extends Equatable {
     this.watchlistMessage = '',
 });
 
-  //tambahkan juga factory contructor untuk membuat initial state nya
   factory MovieDetailState.initial() => MovieDetailState(
     movie: MovieDetail.empty(),
     movieDetailState: RequestState.Empty,

@@ -37,17 +37,6 @@ void init() {
     ),
   );
 
-  locator.registerFactory(
-    () => TVSeriesMoreNotifier(
-      getTopRatedTVSeries: locator(),
-      getAirTodayTVSeries: locator(),
-      getPopularTVSeries: locator(),
-    ),
-  );
-
-  locator
-      .registerFactory(() => SearchTVSeriesNotifier(searchTVSeries: locator()));
-
   locator.registerFactory(() => SearchBloc(locator()));
 
   locator.registerFactory(() => MovieDetailBloc(
@@ -65,6 +54,21 @@ void init() {
         getNowPlayingMovies: locator(),
         getPopularMovies: locator(),
         getTopRatedMovies: locator(),
+      ));
+
+  locator.registerFactory(() => SearchTVSeriesBloc(searchTVSeries: locator()));
+  locator.registerFactory(() => TVSeriesMoreBloc(
+        getTopRatedTVSeries: locator(),
+        getAirTodayTVSeries: locator(),
+        getPopularTVSeries: locator(),
+      ));
+
+  locator.registerFactory(() => TVSeriesDetailBloc(
+        getTVSeriesDetail: locator(),
+        getTVSeriesRecommendations: locator(),
+        getWatchListStatus: locator(),
+        saveWatchlist: locator(),
+        removeWatchlist: locator(),
       ));
 
   // use case

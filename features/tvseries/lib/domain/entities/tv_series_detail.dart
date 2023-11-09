@@ -42,6 +42,27 @@ class TVSeriesDetail extends Equatable {
     required this.nextEpisodeToAir
   });
 
+  factory TVSeriesDetail.empty() => const TVSeriesDetail(
+    backdropPath: '',
+    genres: [],
+    id: 0,
+    name: '',
+    numberOfEpisodes: 0,
+    numberOfSeasons: 0,
+    originalLanguage: '',
+    originalName: '',
+    overview: '',
+    popularity: 0,
+    posterPath: '',
+    status: '',
+    tagline: '',
+    type: '',
+    voteAverage: 0,
+    voteCount: 0,
+    seasons: [],
+    nextEpisodeToAir: null
+  );
+
   @override
   List<Object?> get props {
     return [

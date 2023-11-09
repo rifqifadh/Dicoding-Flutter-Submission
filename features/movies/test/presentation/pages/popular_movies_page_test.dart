@@ -1,6 +1,4 @@
-import 'dart:io';
 
-import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -10,9 +8,6 @@ import 'package:movies/movies.dart';
 import '../../dummy_data/dummy_object.dart';
 
 class MockPopularMoviesBloc extends Mock implements PopularMoviesBloc {}
-class MockPopularMoviesEvent extends Mock implements PopularMoviesEvent {}
-class MockPopularMoviesState extends Mock implements PopularMoviesState {}
-
 
 void main() {
   late PopularMoviesBloc mockBloc;

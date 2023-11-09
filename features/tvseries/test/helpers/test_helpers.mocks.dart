@@ -47,8 +47,9 @@ class _FakeEither_1<L, R> extends _i1.SmartFake implements _i3.Either<L, R> {
         );
 }
 
-class _FakeResponse_2 extends _i1.SmartFake implements _i4.Response {
-  _FakeResponse_2(
+class _FakeTVSeriesRepository_2 extends _i1.SmartFake
+    implements _i2.TVSeriesRepository {
+  _FakeTVSeriesRepository_2(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -57,9 +58,19 @@ class _FakeResponse_2 extends _i1.SmartFake implements _i4.Response {
         );
 }
 
-class _FakeStreamedResponse_3 extends _i1.SmartFake
+class _FakeResponse_3 extends _i1.SmartFake implements _i4.Response {
+  _FakeResponse_3(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeStreamedResponse_4 extends _i1.SmartFake
     implements _i4.StreamedResponse {
-  _FakeStreamedResponse_3(
+  _FakeStreamedResponse_4(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -384,6 +395,366 @@ class MockTVSeriesRepository extends _i1.Mock
       ) as _i5.Future<bool>);
 }
 
+/// A class which mocks [SearchTVSeries].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockSearchTVSeries extends _i1.Mock implements _i2.SearchTVSeries {
+  MockSearchTVSeries() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.TVSeriesRepository get repository => (super.noSuchMethod(
+        Invocation.getter(#repository),
+        returnValue: _FakeTVSeriesRepository_2(
+          this,
+          Invocation.getter(#repository),
+        ),
+      ) as _i2.TVSeriesRepository);
+
+  @override
+  _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>> execute(
+          String? query) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #execute,
+          [query],
+        ),
+        returnValue:
+            _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>>.value(
+                _FakeEither_1<_i7.Failure, List<_i2.TVSeries>>(
+          this,
+          Invocation.method(
+            #execute,
+            [query],
+          ),
+        )),
+      ) as _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>>);
+}
+
+/// A class which mocks [GetAirTodayTVSeries].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockGetAirTodayTVSeries extends _i1.Mock
+    implements _i2.GetAirTodayTVSeries {
+  MockGetAirTodayTVSeries() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.TVSeriesRepository get repository => (super.noSuchMethod(
+        Invocation.getter(#repository),
+        returnValue: _FakeTVSeriesRepository_2(
+          this,
+          Invocation.getter(#repository),
+        ),
+      ) as _i2.TVSeriesRepository);
+
+  @override
+  _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>> execute() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #execute,
+          [],
+        ),
+        returnValue:
+            _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>>.value(
+                _FakeEither_1<_i7.Failure, List<_i2.TVSeries>>(
+          this,
+          Invocation.method(
+            #execute,
+            [],
+          ),
+        )),
+      ) as _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>>);
+}
+
+/// A class which mocks [GetOnTheAirTVSeries].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockGetOnTheAirTVSeries extends _i1.Mock
+    implements _i2.GetOnTheAirTVSeries {
+  MockGetOnTheAirTVSeries() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.TVSeriesRepository get repository => (super.noSuchMethod(
+        Invocation.getter(#repository),
+        returnValue: _FakeTVSeriesRepository_2(
+          this,
+          Invocation.getter(#repository),
+        ),
+      ) as _i2.TVSeriesRepository);
+
+  @override
+  _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>> execute() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #execute,
+          [],
+        ),
+        returnValue:
+            _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>>.value(
+                _FakeEither_1<_i7.Failure, List<_i2.TVSeries>>(
+          this,
+          Invocation.method(
+            #execute,
+            [],
+          ),
+        )),
+      ) as _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>>);
+}
+
+/// A class which mocks [GetPopularTVSeries].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockGetPopularTVSeries extends _i1.Mock
+    implements _i2.GetPopularTVSeries {
+  MockGetPopularTVSeries() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.TVSeriesRepository get repository => (super.noSuchMethod(
+        Invocation.getter(#repository),
+        returnValue: _FakeTVSeriesRepository_2(
+          this,
+          Invocation.getter(#repository),
+        ),
+      ) as _i2.TVSeriesRepository);
+
+  @override
+  _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>> execute() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #execute,
+          [],
+        ),
+        returnValue:
+            _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>>.value(
+                _FakeEither_1<_i7.Failure, List<_i2.TVSeries>>(
+          this,
+          Invocation.method(
+            #execute,
+            [],
+          ),
+        )),
+      ) as _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>>);
+}
+
+/// A class which mocks [GetTopRatedTVSeries].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockGetTopRatedTVSeries extends _i1.Mock
+    implements _i2.GetTopRatedTVSeries {
+  MockGetTopRatedTVSeries() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.TVSeriesRepository get repository => (super.noSuchMethod(
+        Invocation.getter(#repository),
+        returnValue: _FakeTVSeriesRepository_2(
+          this,
+          Invocation.getter(#repository),
+        ),
+      ) as _i2.TVSeriesRepository);
+
+  @override
+  _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>> execute() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #execute,
+          [],
+        ),
+        returnValue:
+            _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>>.value(
+                _FakeEither_1<_i7.Failure, List<_i2.TVSeries>>(
+          this,
+          Invocation.method(
+            #execute,
+            [],
+          ),
+        )),
+      ) as _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>>);
+}
+
+/// A class which mocks [GetTVSeriesDetail].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockGetTVSeriesDetail extends _i1.Mock implements _i2.GetTVSeriesDetail {
+  MockGetTVSeriesDetail() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.TVSeriesRepository get repository => (super.noSuchMethod(
+        Invocation.getter(#repository),
+        returnValue: _FakeTVSeriesRepository_2(
+          this,
+          Invocation.getter(#repository),
+        ),
+      ) as _i2.TVSeriesRepository);
+
+  @override
+  _i5.Future<_i3.Either<_i7.Failure, _i2.TVSeriesDetail>> execute(int? id) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #execute,
+          [id],
+        ),
+        returnValue:
+            _i5.Future<_i3.Either<_i7.Failure, _i2.TVSeriesDetail>>.value(
+                _FakeEither_1<_i7.Failure, _i2.TVSeriesDetail>(
+          this,
+          Invocation.method(
+            #execute,
+            [id],
+          ),
+        )),
+      ) as _i5.Future<_i3.Either<_i7.Failure, _i2.TVSeriesDetail>>);
+}
+
+/// A class which mocks [GetWatchListStatusTVSeries].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockGetWatchListStatusTVSeries extends _i1.Mock
+    implements _i2.GetWatchListStatusTVSeries {
+  MockGetWatchListStatusTVSeries() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.TVSeriesRepository get repository => (super.noSuchMethod(
+        Invocation.getter(#repository),
+        returnValue: _FakeTVSeriesRepository_2(
+          this,
+          Invocation.getter(#repository),
+        ),
+      ) as _i2.TVSeriesRepository);
+
+  @override
+  _i5.Future<bool> execute(int? id) => (super.noSuchMethod(
+        Invocation.method(
+          #execute,
+          [id],
+        ),
+        returnValue: _i5.Future<bool>.value(false),
+      ) as _i5.Future<bool>);
+}
+
+/// A class which mocks [GetTVSeriesRecommendations].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockGetTVSeriesRecommendations extends _i1.Mock
+    implements _i2.GetTVSeriesRecommendations {
+  MockGetTVSeriesRecommendations() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.TVSeriesRepository get repository => (super.noSuchMethod(
+        Invocation.getter(#repository),
+        returnValue: _FakeTVSeriesRepository_2(
+          this,
+          Invocation.getter(#repository),
+        ),
+      ) as _i2.TVSeriesRepository);
+
+  @override
+  _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>> execute(int? id) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #execute,
+          [id],
+        ),
+        returnValue:
+            _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>>.value(
+                _FakeEither_1<_i7.Failure, List<_i2.TVSeries>>(
+          this,
+          Invocation.method(
+            #execute,
+            [id],
+          ),
+        )),
+      ) as _i5.Future<_i3.Either<_i7.Failure, List<_i2.TVSeries>>>);
+}
+
+/// A class which mocks [RemoveWatchlistTVSeries].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockRemoveWatchlistTVSeries extends _i1.Mock
+    implements _i2.RemoveWatchlistTVSeries {
+  MockRemoveWatchlistTVSeries() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.TVSeriesRepository get repository => (super.noSuchMethod(
+        Invocation.getter(#repository),
+        returnValue: _FakeTVSeriesRepository_2(
+          this,
+          Invocation.getter(#repository),
+        ),
+      ) as _i2.TVSeriesRepository);
+
+  @override
+  _i5.Future<_i3.Either<_i7.Failure, String>> execute(
+          _i2.TVSeriesDetail? tvSeries) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #execute,
+          [tvSeries],
+        ),
+        returnValue: _i5.Future<_i3.Either<_i7.Failure, String>>.value(
+            _FakeEither_1<_i7.Failure, String>(
+          this,
+          Invocation.method(
+            #execute,
+            [tvSeries],
+          ),
+        )),
+      ) as _i5.Future<_i3.Either<_i7.Failure, String>>);
+}
+
+/// A class which mocks [SaveWatchlistTVSeries].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockSaveWatchlistTVSeries extends _i1.Mock
+    implements _i2.SaveWatchlistTVSeries {
+  MockSaveWatchlistTVSeries() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.TVSeriesRepository get repository => (super.noSuchMethod(
+        Invocation.getter(#repository),
+        returnValue: _FakeTVSeriesRepository_2(
+          this,
+          Invocation.getter(#repository),
+        ),
+      ) as _i2.TVSeriesRepository);
+
+  @override
+  _i5.Future<_i3.Either<_i7.Failure, String>> execute(
+          _i2.TVSeriesDetail? tvSeries) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #execute,
+          [tvSeries],
+        ),
+        returnValue: _i5.Future<_i3.Either<_i7.Failure, String>>.value(
+            _FakeEither_1<_i7.Failure, String>(
+          this,
+          Invocation.method(
+            #execute,
+            [tvSeries],
+          ),
+        )),
+      ) as _i5.Future<_i3.Either<_i7.Failure, String>>);
+}
+
 /// A class which mocks [DatabaseHelper].
 ///
 /// See the documentation for Mockito's code generation for more information.
@@ -458,7 +829,7 @@ class MockHttpClient extends _i1.Mock implements _i4.Client {
           [url],
           {#headers: headers},
         ),
-        returnValue: _i5.Future<_i4.Response>.value(_FakeResponse_2(
+        returnValue: _i5.Future<_i4.Response>.value(_FakeResponse_3(
           this,
           Invocation.method(
             #head,
@@ -479,7 +850,7 @@ class MockHttpClient extends _i1.Mock implements _i4.Client {
           [url],
           {#headers: headers},
         ),
-        returnValue: _i5.Future<_i4.Response>.value(_FakeResponse_2(
+        returnValue: _i5.Future<_i4.Response>.value(_FakeResponse_3(
           this,
           Invocation.method(
             #get,
@@ -506,7 +877,7 @@ class MockHttpClient extends _i1.Mock implements _i4.Client {
             #encoding: encoding,
           },
         ),
-        returnValue: _i5.Future<_i4.Response>.value(_FakeResponse_2(
+        returnValue: _i5.Future<_i4.Response>.value(_FakeResponse_3(
           this,
           Invocation.method(
             #post,
@@ -537,7 +908,7 @@ class MockHttpClient extends _i1.Mock implements _i4.Client {
             #encoding: encoding,
           },
         ),
-        returnValue: _i5.Future<_i4.Response>.value(_FakeResponse_2(
+        returnValue: _i5.Future<_i4.Response>.value(_FakeResponse_3(
           this,
           Invocation.method(
             #put,
@@ -568,7 +939,7 @@ class MockHttpClient extends _i1.Mock implements _i4.Client {
             #encoding: encoding,
           },
         ),
-        returnValue: _i5.Future<_i4.Response>.value(_FakeResponse_2(
+        returnValue: _i5.Future<_i4.Response>.value(_FakeResponse_3(
           this,
           Invocation.method(
             #patch,
@@ -599,7 +970,7 @@ class MockHttpClient extends _i1.Mock implements _i4.Client {
             #encoding: encoding,
           },
         ),
-        returnValue: _i5.Future<_i4.Response>.value(_FakeResponse_2(
+        returnValue: _i5.Future<_i4.Response>.value(_FakeResponse_3(
           this,
           Invocation.method(
             #delete,
@@ -649,7 +1020,7 @@ class MockHttpClient extends _i1.Mock implements _i4.Client {
           [request],
         ),
         returnValue:
-            _i5.Future<_i4.StreamedResponse>.value(_FakeStreamedResponse_3(
+            _i5.Future<_i4.StreamedResponse>.value(_FakeStreamedResponse_4(
           this,
           Invocation.method(
             #send,

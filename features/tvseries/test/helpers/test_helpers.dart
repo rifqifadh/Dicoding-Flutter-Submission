@@ -7,6 +7,16 @@ import 'package:http/http.dart' as http;
   TVSeriesLocalDataSource,
   TVSeriesRemoteDataSource,
   TVSeriesRepository,
+  SearchTVSeries,
+  GetAirTodayTVSeries,
+  GetOnTheAirTVSeries,
+  GetPopularTVSeries,
+  GetTopRatedTVSeries,
+  GetTVSeriesDetail,
+  GetWatchListStatusTVSeries,
+  GetTVSeriesRecommendations,
+  RemoveWatchlistTVSeries,
+  SaveWatchlistTVSeries,
   DatabaseHelper,
 ], customMocks: [
   MockSpec<http.Client>(as: #MockHttpClient)
