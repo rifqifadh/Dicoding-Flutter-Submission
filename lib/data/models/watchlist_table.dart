@@ -27,30 +27,6 @@ class WatchlistTable extends WatchlistTableInterface with EquatableMixin {
     required this.type,
   });
 
-  factory WatchlistTable.fromMovieEntity(MovieDetail movie) => WatchlistTable(
-        id: movie.id,
-        title: movie.title,
-        posterPath: movie.posterPath,
-        overview: movie.overview,
-        nextEpisode: 0,
-        nextEpisodeToAir: '',
-        nextEpisodeName: '',
-        seasonNumber: 0,
-        type: WatchlistType.movie,
-      );
-
-  factory WatchlistTable.fromTVSeriesEntity(TVSeriesDetail tvSeries) => WatchlistTable(
-        id: tvSeries.id,
-        title: tvSeries.name,
-        posterPath: tvSeries.posterPath,
-        overview: tvSeries.overview,
-        nextEpisode: tvSeries.nextEpisodeToAir?.episodeNumber ?? 0,
-        nextEpisodeToAir: tvSeries.nextEpisodeToAir?.airDate ?? '',
-        nextEpisodeName: tvSeries.nextEpisodeToAir?.name ?? '',
-        seasonNumber: tvSeries.nextEpisodeToAir?.seasonNumber ?? 0,
-        type: WatchlistType.tvSeries,
-      );
-
   factory WatchlistTable.fromMap(Map<String, dynamic> map) {
     return WatchlistTable(
         id: map['id'],

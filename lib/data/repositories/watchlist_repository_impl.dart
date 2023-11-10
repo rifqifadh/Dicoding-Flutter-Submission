@@ -14,7 +14,11 @@ class WatchlistRepositoryImpl extends WatchlistRepository {
 
   @override
   Future<Either<Failure, List<Watchlist>>> getWatchlist() async {
+    try {
     final result = await localDataSource.getWatchlist();
-    return Right(result.map((data) => data.toEntity()).toList());
+      return Right(result.map((data) => data.toEntity()).toList());
+    } on DatabaseException {
+      return const Left(DatabaseFailure('Failed to get watchlist'));
+    }
   }
 }

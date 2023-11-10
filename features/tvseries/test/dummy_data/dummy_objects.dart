@@ -120,7 +120,7 @@ final testTVSeriesDetailModel = TVSeriesDetailModel(
 
 final testTVSeriesDetail = TVSeriesDetail(
     backdropPath: '',
-    genres: [Genre(id: 1, name: 'Action')],
+    genres: const [Genre(id: 1, name: 'Action')],
     id: 1,
     name: 'Loki',
     numberOfEpisodes: 16,
@@ -179,7 +179,7 @@ const testTVSeriesDetailFailure = TVSeriesDetail(
 
 final testTVSeriesDetailWithAirDate = TVSeriesDetail(
     backdropPath: '',
-    genres: [Genre(id: 1, name: 'Action')],
+    genres: const [Genre(id: 1, name: 'Action')],
     id: 1,
     name: 'Loki',
     numberOfEpisodes: 16,

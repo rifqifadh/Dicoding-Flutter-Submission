@@ -10,10 +10,21 @@ final testWatchlist = Watchlist(
     posterPath: 'posterPath',
     overview: 'overview',
     nextEpisode: 1,
-    nextEpisodeToAir: 'nextEpisodeToAir',
+    nextEpisodeToAir: '2023-01-01',
     nextEpisodeName: 'nextEpisodeName',
     seasonNumber: 1,
     type: WatchlistType.tvSeries);
+
+final testWatchlistMovie = Watchlist(
+    id: 1,
+    title: 'title',
+    posterPath: 'posterPath',
+    overview: 'overview',
+    nextEpisode: 1,
+    nextEpisodeToAir: 'nextEpisodeToAir',
+    nextEpisodeName: 'nextEpisodeName',
+    seasonNumber: 1,
+    type: WatchlistType.movie);
 
 final testTVSeriesTable = WatchlistTable(
     id: 1,

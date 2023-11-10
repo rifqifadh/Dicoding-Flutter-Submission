@@ -3,7 +3,6 @@ import 'package:core/core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:movies/domain/entities/movie.dart';
-import 'package:movies/domain/entities/movie_detail.dart';
 import 'package:movies/presentation/bloc/movie_detail/movie_detail_bloc.dart';
 import 'package:movies/presentation/pages/movie_detail_page.dart';
 import 'package:flutter/material.dart';

@@ -8,8 +8,12 @@ import 'package:nock/nock.dart';
 import 'package:tvseries/tvseries.dart';
 
 import '../../dummy_data/dummy_objects.dart';
+import '../../helpers/test_helpers.mocks.dart';
 
-class MockTVSeriesListBloc extends Mock implements TVSeriesListBloc {}
+class MockTVSeriesListBloc extends Mock implements TVSeriesListBloc {
+  @override
+  GetAirTodayTVSeries get getAirTodayTVSeries => GetAirTodayTVSeries(MockTVSeriesRepository());
+}
 
 void main() {
   late TVSeriesListBloc bloc;
@@ -18,6 +22,7 @@ void main() {
 
   setUp(() {
     bloc = MockTVSeriesListBloc();
+    GoogleFonts.config.allowRuntimeFetching = false;
     nock.cleanAll();
   });
 

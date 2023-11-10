@@ -1,8 +1,8 @@
 import 'package:ditonton/data/datasources/watchlist_local_data_source.dart';
 import 'package:ditonton/data/repositories/watchlist_repository_impl.dart';
 import 'package:ditonton/domain/repositories/watchlist_repository.dart';
-import 'package:ditonton/domain/usecases/watchlist/get_watchlist.dart';
-import 'package:ditonton/presentation/provider/watchlist_notifier.dart';
+import 'package:ditonton/domain/usecases/get_watchlist.dart';
+import 'package:ditonton/presentation/bloc/watchlist_bloc.dart';
 import 'package:movies/movies.dart';
 import 'package:core/core.dart';
 import 'package:http/http.dart' as http;
@@ -13,11 +13,7 @@ final locator = GetIt.instance;
 
 void init() {
   // provider
-  locator.registerFactory(
-    () => WatchlistNotifier(
-      getWatchlist: locator(),
-    ),
-  );
+  locator.registerFactory(() => WatchlistBloc(getWatchlist: locator()));
 
   locator.registerFactory(() => SearchBloc(locator()));
 

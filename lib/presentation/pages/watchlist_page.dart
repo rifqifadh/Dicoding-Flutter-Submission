@@ -1,9 +1,9 @@
 import 'package:core/core.dart';
 import 'package:ditonton/common/utils.dart';
-import 'package:ditonton/presentation/provider/watchlist_notifier.dart';
+import 'package:ditonton/presentation/bloc/watchlist_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies/presentation/widget/movie_card_list.dart';
-import 'package:provider/provider.dart';
 import 'package:tvseries/presentation/widgets/tv_series_card.dart';
 
 class WatchlistPage extends StatefulWidget {
@@ -18,9 +18,7 @@ class _WatchlistPageState extends State<WatchlistPage>
   @override
   void initState() {
     super.initState();
-    Future.microtask(() =>
-        Provider.of<WatchlistNotifier>(context, listen: false)
-            .fetchWatchlistMovies());
+    BlocProvider.of<WatchlistBloc>(context).add(OnLoadWatchlist());
   }
 
   @override
@@ -30,8 +28,7 @@ class _WatchlistPageState extends State<WatchlistPage>
   }
 
   void didPopNext() {
-    Provider.of<WatchlistNotifier>(context, listen: false)
-        .fetchWatchlistMovies();
+    BlocProvider.of<WatchlistBloc>(context).add(OnLoadWatchlist());
   }
 
   @override
@@ -42,24 +39,27 @@ class _WatchlistPageState extends State<WatchlistPage>
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Consumer<WatchlistNotifier>(
-          builder: (context, data, child) {
-            if (data.watchlistState == RequestState.Loading) {
+        child: 
+        BlocBuilder<WatchlistBloc, WatchlistState>(
+          builder: (context, state) {
+            if (state.state == RequestState.Loading) {
               return Center(
                 child: CircularProgressIndicator(),
               );
-            } else if (data.watchlistState == RequestState.Loaded) {
+            } else if (state.state == RequestState.Loaded) {
               return ListView.builder(
+                key: Key('watchlist_list'),
                 itemBuilder: (context, index) {
-                  final items = data.watchlistData[index];
+                  final items = state.watchlist[index];
+
                   return items.type == WatchlistType.movie ? MovieCard(items.toMovie()) : TVSeriesCard(items.toTVSeries());
                 },
-                itemCount: data.watchlistData.length,
+                itemCount: state.watchlist.length,
               );
             } else {
               return Center(
                 key: Key('error_message'),
-                child: Text(data.message),
+                child: Text(state.message),
               );
             }
           },

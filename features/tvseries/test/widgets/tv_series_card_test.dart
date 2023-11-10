@@ -1,11 +1,18 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:nock/nock.dart';
 import 'package:tvseries/presentation/widgets/tv_series_card.dart';
-
 import '../dummy_data/dummy_objects.dart';
 
+
 void main() {
+
+  setUpAll(nock.init);
+
+  setUp(() {
+    nock.cleanAll();
+  });
 
   Widget _makeTestableWidget(Widget body) {
     return MaterialApp(

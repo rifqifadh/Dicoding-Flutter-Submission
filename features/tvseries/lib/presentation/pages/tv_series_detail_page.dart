@@ -26,6 +26,8 @@ class _TVSeriesDetailPageState extends State<TVSeriesDetailPage> {
         .add(OnLoadTVSeriesDetail(widget.id));
     BlocProvider.of<TVSeriesDetailBloc>(context)
         .add(OnLoadTVSeriesRecommendation(widget.id));
+    BlocProvider.of<TVSeriesDetailBloc>(context)
+        .add(OnLoadWatchlistStatus(widget.id));
   }
 
   @override
