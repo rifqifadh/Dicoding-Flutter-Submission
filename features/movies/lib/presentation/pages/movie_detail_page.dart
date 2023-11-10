@@ -198,6 +198,7 @@ class DetailContent extends StatelessWidget {
                                 return SizedBox(
                                   height: 150,
                                   child: ListView.builder(
+                                    key: const Key('recommendation_list'),
                                     scrollDirection: Axis.horizontal,
                                     itemBuilder: (context, index) {
                                       final movie = recommendations[index];
@@ -255,9 +256,7 @@ class DetailContent extends StatelessWidget {
                 ),
               );
             },
-            // initialChildSize: 0.5,
             minChildSize: 0.25,
-            // maxChildSize: 1.0,
           ),
         ),
         Padding(

@@ -7,27 +7,11 @@ import 'package:tvseries/tvseries.dart';
 import 'package:nock/nock.dart';
 
 import '../../dummy_data/dummy_objects.dart';
-import '../../helpers/test_helpers.mocks.dart';
 
-class MockTVSeriesDetailBloc extends Mock implements TVSeriesDetailBloc {
-  @override
-  Stream<TVSeriesDetailState> mapEventToState(
-      TVSeriesDetailEvent event) async* {
-    yield TVSeriesDetailState.initial().copyWith(
-      tvSeriesDetailState: RequestState.Loading,
-    );
-    yield TVSeriesDetailState.initial().copyWith(
-      tvSeriesDetailState: RequestState.Loaded,
-      tvSeries: testTVSeriesDetail,
-      tvSeriesRecommendations: <TVSeries>[],
-      tvSeriesRecommendationsState: RequestState.Loaded,
-    );
-  }
-}
+class MockTVSeriesDetailBloc extends Mock implements TVSeriesDetailBloc {}
 
 void main() {
   late TVSeriesDetailBloc bloc;
-  final mockHttpClient = MockHttpClient();
 
   setUpAll(nock.init);
 
@@ -40,7 +24,10 @@ void main() {
     return BlocProvider<TVSeriesDetailBloc>.value(
       value: bloc,
       child: MaterialApp(
-        home: body,
+        home: MediaQuery(
+          data: const MediaQueryData(),
+          child: body,
+        ),
       ),
     );
   }
@@ -77,5 +64,69 @@ void main() {
     )));
 
     expect(progressBarFinder, findsOneWidget);
+  });
+
+  testWidgets('Page should display TVSeriesDetail when success',
+      (WidgetTester widgetTester) async {
+    when(() => bloc.stream)
+        .thenAnswer((_) => Stream.value(TVSeriesDetailState.initial()));
+    when(() => bloc.state).thenReturn(TVSeriesDetailState.initial().copyWith(
+      tvSeriesDetailState: RequestState.Loaded,
+      tvSeries: testTVSeriesDetail,
+      tvSeriesRecommendations: <TVSeries>[],
+      tvSeriesRecommendationsState: RequestState.Loaded,
+    ));
+
+    final tvSeriesDetailFinder = find.byType(TVSeriesDetailPage);
+
+    await widgetTester.pumpWidget(_makeTestableWidget(const 
+      TVSeriesDetailPage(id: 123)
+    ));
+    await widgetTester.pumpAndSettle();
+
+    expect(tvSeriesDetailFinder, findsOneWidget);
+  });
+
+  testWidgets('Page should display TVSeriesDetail when success with empty response',
+      (WidgetTester widgetTester) async {
+    when(() => bloc.stream)
+        .thenAnswer((_) => Stream.value(TVSeriesDetailState.initial()));
+    when(() => bloc.state).thenReturn(TVSeriesDetailState.initial().copyWith(
+      tvSeriesDetailState: RequestState.Loaded,
+      tvSeries: testTVSeriesDetailFailure,
+      tvSeriesRecommendations: <TVSeries>[],
+      tvSeriesRecommendationsState: RequestState.Loaded,
+    ));
+
+    final tvSeriesDetailFinder = find.byType(TVSeriesDetailContent);
+
+    await widgetTester.pumpWidget(_makeTestableWidget(const 
+      TVSeriesDetailPage(id: 123)
+    ));
+
+    expect(tvSeriesDetailFinder, findsOneWidget);
+  });
+
+  testWidgets('Should Add to Wishlist with successful result',
+      (WidgetTester widgetTester) async {
+    when(() => bloc.stream)
+        .thenAnswer((_) => Stream.value(TVSeriesDetailState.initial()));
+    when(() => bloc.state).thenReturn(TVSeriesDetailState.initial().copyWith(
+      tvSeriesDetailState: RequestState.Loaded,
+      tvSeries: testTVSeriesDetail,
+      tvSeriesRecommendations: <TVSeries>[],
+      tvSeriesRecommendationsState: RequestState.Loaded,
+      isAddedToWatchlist: false,
+      message: 'Added to Watchlist',
+    ));
+
+
+    final watchlistButtonIcon = find.byIcon(Icons.add);
+
+    await widgetTester.pumpWidget(_makeTestableWidget(const 
+      TVSeriesDetailPage(id: 123)
+    ));
+
+    expect(watchlistButtonIcon, findsOneWidget);
   });
 }

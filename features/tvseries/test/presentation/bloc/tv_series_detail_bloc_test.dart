@@ -37,7 +37,7 @@ void main() {
     'Should emit tvSeries when fetch detail is success',
     build: () {
       when(mockGetTVSeriesDetail.execute(id))
-          .thenAnswer((_) async => const Right(testTVSeriesDetail));
+          .thenAnswer((_) async => Right(testTVSeriesDetail));
       return bloc;
     },
     act: (bloc) => bloc.add(const OnLoadTVSeriesDetail(id)),
@@ -124,7 +124,7 @@ void main() {
           .thenAnswer((_) async => true);
       return bloc;
     },
-    act: (bloc) => bloc.add(const OnButtonWatchlistTapped(testTVSeriesDetail)),
+    act: (bloc) => bloc.add(OnButtonWatchlistTapped(testTVSeriesDetail)),
     expect: () => [
       TVSeriesDetailState.initial().copyWith(
         isAddedToWatchlist: true,
@@ -144,7 +144,7 @@ void main() {
           .thenAnswer((_) async => false);
       return bloc;
     },
-    act: (bloc) => bloc.add(const OnButtonWatchlistTapped(testTVSeriesDetail)),
+    act: (bloc) => bloc.add(OnButtonWatchlistTapped(testTVSeriesDetail)),
     expect: () => [
       TVSeriesDetailState.initial().copyWith(
         isAddedToWatchlist: false,

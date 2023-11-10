@@ -47,6 +47,20 @@ final testTVSeries = TVSeries(
     posterPath: '/voHUmluYmKyleFkTu3lOXQG702u.jpg',
     voteAverage: 0.0);
 
+var testTVSeriesWithSeason = TVSeries(
+    id: 1,
+    name: 'Loki',
+    overview: 'After stealing the Tesseract during the events of',
+    posterPath: '/voHUmluYmKyleFkTu3lOXQG702u.jpg',
+    voteAverage: 0.0,
+    nextEpisodeToAir: NextEpisodeToAir(
+        id: 1,
+        name: 'Ourboros',
+        airDate: '2019-05-19',
+        seasonNumber: 2,
+        episodeNumber: 1)
+    );
+
 const testTVSeriesModel = TVSeriesModel(
     backdropPath: '',
     firstAirDate: '',
@@ -104,7 +118,7 @@ final testTVSeriesDetailModel = TVSeriesDetailModel(
         seasonNumber: 2,
         episodeNumber: 1));
 
-const testTVSeriesDetail = TVSeriesDetail(
+final testTVSeriesDetail = TVSeriesDetail(
     backdropPath: '',
     genres: [Genre(id: 1, name: 'Action')],
     id: 1,
@@ -121,7 +135,7 @@ const testTVSeriesDetail = TVSeriesDetail(
     type: '',
     voteAverage: 0,
     voteCount: 0,
-    seasons: [
+    seasons: const [
       Season(airDate: '', episodeCount: 1, id: 1, name: '', episodes: [
         Episode(
             airDate: '',
@@ -143,7 +157,27 @@ const testTVSeriesDetail = TVSeriesDetail(
         seasonNumber: 2,
         episodeNumber: 1));
 
-const testTVSeriesDetailWithAirDate = TVSeriesDetail(
+const testTVSeriesDetailFailure = TVSeriesDetail(
+    backdropPath: '',
+    genres: [],
+    id: 1,
+    name: 'Loki',
+    numberOfEpisodes: 16,
+    numberOfSeasons: 2,
+    originalLanguage: '',
+    originalName: '',
+    overview: '',
+    popularity: 0,
+    posterPath: '',
+    status: '',
+    tagline: '',
+    type: '',
+    voteAverage: 0,
+    voteCount: 0,
+    seasons: [],
+    nextEpisodeToAir: null);
+
+final testTVSeriesDetailWithAirDate = TVSeriesDetail(
     backdropPath: '',
     genres: [Genre(id: 1, name: 'Action')],
     id: 1,
@@ -160,7 +194,7 @@ const testTVSeriesDetailWithAirDate = TVSeriesDetail(
     type: '',
     voteAverage: 0,
     voteCount: 0,
-    seasons: [
+    seasons: const [
       Season(airDate: '', episodeCount: 1, id: 1, name: '', episodes: [
         Episode(
             airDate: '',

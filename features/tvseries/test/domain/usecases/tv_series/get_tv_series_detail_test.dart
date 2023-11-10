@@ -17,20 +17,20 @@ void main() {
   test('should get detail movies from the repository', () async {
     // arrange
     when(mockRepository.getTVSeriesDetail(1))
-        .thenAnswer((_) async => const Right(testTVSeriesDetail));
+        .thenAnswer((_) async => Right(testTVSeriesDetail));
     // act
     final result = await usecase.execute(1);
     // assert
-    expect(result, const Right(testTVSeriesDetail));
+    expect(result, Right(testTVSeriesDetail));
   });
 
   test('should get detail movies from the repository with airDate', () async {
     // arrange
     when(mockRepository.getTVSeriesDetail(1))
-        .thenAnswer((_) async => const Right(testTVSeriesDetailWithAirDate));
+        .thenAnswer((_) async => Right(testTVSeriesDetailWithAirDate));
     // act
     final result = await usecase.execute(1);
     // assert
-    expect(result, const Right(testTVSeriesDetailWithAirDate));
+    expect(result, Right(testTVSeriesDetailWithAirDate));
   });
 }

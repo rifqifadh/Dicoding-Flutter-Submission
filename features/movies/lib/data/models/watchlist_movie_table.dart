@@ -1,6 +1,5 @@
 import 'package:equatable/equatable.dart';
 import 'package:movies/domain/entities/movie_detail.dart';
-import 'package:movies/domain/entities/watchlist.dart';
 import 'package:core/core.dart';
 
 class WatchlistTable extends WatchlistTableInterface with EquatableMixin {
@@ -38,18 +37,6 @@ class WatchlistTable extends WatchlistTableInterface with EquatableMixin {
         type: WatchlistType.movie,
       );
 
-  // factory WatchlistTable.fromTVSeriesEntity(TVSeriesDetail tvSeries) => WatchlistTable(
-  //       id: tvSeries.id,
-  //       title: tvSeries.name,
-  //       posterPath: tvSeries.posterPath,
-  //       overview: tvSeries.overview,
-  //       nextEpisode: tvSeries.nextEpisodeToAir?.episodeNumber ?? 0,
-  //       nextEpisodeToAir: tvSeries.nextEpisodeToAir?.airDate ?? '',
-  //       nextEpisodeName: tvSeries.nextEpisodeToAir?.name ?? '',
-  //       seasonNumber: tvSeries.nextEpisodeToAir?.seasonNumber ?? 0,
-  //       type: WatchlistType.tvSeries,
-  //     );
-
   factory WatchlistTable.fromMap(Map<String, dynamic> map) {
     return WatchlistTable(
       id: map['id'],
@@ -76,18 +63,6 @@ class WatchlistTable extends WatchlistTableInterface with EquatableMixin {
         'seasonNumber': seasonNumber,
         'type': type?.name.toString() ?? 'movie',
       };
-
-  Watchlist toEntity() => Watchlist(
-        id: id ?? 0,
-        overview: overview ?? '',
-        posterPath: posterPath ?? '',
-        title: title ?? '',
-        nextEpisode: nextEpisode ?? 0,
-        nextEpisodeToAir: nextEpisodeToAir ?? '',
-        nextEpisodeName: nextEpisodeName ?? '',
-        seasonNumber: seasonNumber ?? 0,
-        type: type ?? WatchlistType.movie,
-      );
 
   @override
   List<Object?> get props => [id, title, posterPath, overview];

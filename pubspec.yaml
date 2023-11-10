@@ -55,6 +55,7 @@ dev_dependencies:
 
   bloc_test: ^9.1.5
   mocktail: ^1.0.1
+  nock: ^1.2.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

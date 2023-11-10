@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 
 class NextEpisodeToAir extends Equatable {
   final int id;
-  final String name;
+  String name;
   final String airDate;
   final int seasonNumber;
   final int episodeNumber;
@@ -16,7 +16,7 @@ class NextEpisodeToAir extends Equatable {
     return DateFormat('dd MMM yyyy').format(date);
   }
 
-  const NextEpisodeToAir({
+  NextEpisodeToAir({
     required this.id,
     required this.name,
     required this.airDate,

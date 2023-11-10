@@ -238,7 +238,7 @@ void main() {
           .thenAnswer((_) async => testTVSeriesDetailModel);
       final result = await repository.getTVSeriesDetail(1);
       verify(mockRemoteDataSource.getTVSeriesDetail(1));
-      expect(result, equals(const Right(testTVSeriesDetail)));
+      expect(result, equals(Right(testTVSeriesDetail)));
     });
 
     test('should return ServerFailure when call to data source is unsuccessful',

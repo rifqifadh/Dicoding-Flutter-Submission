@@ -1,5 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-
 import 'package:core/core.dart';
 import 'package:equatable/equatable.dart';
 import 'package:movies/domain/entities/movie.dart';
@@ -33,14 +31,6 @@ class Watchlist extends Equatable {
         posterPath: posterPath,
         title: title,
   );
-
-  // TVSeries toTVSeries() => TVSeries.watchlist(
-  //       id: id,
-  //       overview: overview,
-  //       posterPath: posterPath,
-  //       name: title,
-  //       nextEpisodeToAir: NextEpisodeToAir(id: 0, name: nextEpisodeName, airDate: nextEpisodeToAir, seasonNumber: seasonNumber, episodeNumber: nextEpisode)
-  // );
 
   @override
   List<Object> get props {

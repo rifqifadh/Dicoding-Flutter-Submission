@@ -21,6 +21,7 @@ class SearchTVSeriesPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextField(
+              key: const Key('search_text_field'),
               onChanged: (value) {
                 context.read<SearchTVSeriesBloc>().add(OnQueryChanged(value));
               },
