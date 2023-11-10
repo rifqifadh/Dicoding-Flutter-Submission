@@ -18,6 +18,7 @@ import 'package:http/http.dart' as http;
   RemoveWatchlistTVSeries,
   SaveWatchlistTVSeries,
   DatabaseHelper,
+  Networking
 ], customMocks: [
   MockSpec<http.Client>(as: #MockHttpClient)
 ])

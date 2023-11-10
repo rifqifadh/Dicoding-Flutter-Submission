@@ -26,7 +26,7 @@ void main() {
     nock.cleanAll();
   });
 
-  Widget _makeTestableWidget(Widget body) {
+  Widget makeTestableWidget(Widget body) {
     return BlocProvider<TVSeriesListBloc>.value(
       value: bloc,
       child: MaterialApp(
@@ -48,7 +48,7 @@ void main() {
 
     final progressBarFinder = find.byType(CircularProgressIndicator);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesPage()));
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesPage()));
 
     expect(progressBarFinder, findsOneWidget);
   });
@@ -68,7 +68,7 @@ void main() {
 
     final listViewFinder = find.byType(ListView);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesPage()));
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesPage()));
 
     expect(listViewFinder, findsOneWidget);
    });
@@ -83,7 +83,7 @@ void main() {
 
     final progressBarFinder = find.byType(CircularProgressIndicator);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesPage()));
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesPage()));
 
     expect(progressBarFinder, findsOneWidget);
   });
@@ -103,7 +103,7 @@ void main() {
 
     final listViewFinder = find.byType(ListView);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesPage()));
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesPage()));
 
     expect(listViewFinder, findsOneWidget);
    });
@@ -118,7 +118,7 @@ void main() {
 
     final progressBarFinder = find.byType(CircularProgressIndicator);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesPage()));
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesPage()));
 
     expect(progressBarFinder, findsOneWidget);
   });
@@ -138,7 +138,7 @@ void main() {
 
     final listViewFinder = find.byType(ListView);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesPage()));
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesPage()));
 
     expect(listViewFinder, findsOneWidget);
    });
@@ -153,7 +153,7 @@ void main() {
 
     final progressBarFinder = find.byType(CircularProgressIndicator);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesPage()));
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesPage()));
 
     expect(progressBarFinder, findsOneWidget);
   });
@@ -173,7 +173,7 @@ void main() {
 
     final listViewFinder = find.byType(ListView);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesPage()));
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesPage()));
 
     expect(listViewFinder, findsOneWidget);
    });

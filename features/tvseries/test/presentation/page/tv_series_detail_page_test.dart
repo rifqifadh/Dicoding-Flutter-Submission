@@ -20,7 +20,7 @@ void main() {
     nock.cleanAll();
   });
 
-  Widget _makeTestableWidget(Widget body) {
+  Widget makeTestableWidget(Widget body) {
     return BlocProvider<TVSeriesDetailBloc>.value(
       value: bloc,
       child: MaterialApp(
@@ -42,7 +42,7 @@ void main() {
 
     final progressBarFinder = find.byType(CircularProgressIndicator);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesDetailPage(
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesDetailPage(
       id: 1,
     )));
 
@@ -59,7 +59,7 @@ void main() {
 
     final progressBarFinder = find.byType(Text);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesDetailPage(
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesDetailPage(
       id: 1,
     )));
 
@@ -79,7 +79,7 @@ void main() {
 
     final tvSeriesDetailFinder = find.byType(TVSeriesDetailPage);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const 
+    await widgetTester.pumpWidget(makeTestableWidget(const 
       TVSeriesDetailPage(id: 123)
     ));
     await widgetTester.pumpAndSettle();
@@ -100,7 +100,7 @@ void main() {
 
     final tvSeriesDetailFinder = find.byType(TVSeriesDetailContent);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const 
+    await widgetTester.pumpWidget(makeTestableWidget(const 
       TVSeriesDetailPage(id: 123)
     ));
 
@@ -123,7 +123,7 @@ void main() {
 
     final watchlistButtonIcon = find.byIcon(Icons.add);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const 
+    await widgetTester.pumpWidget(makeTestableWidget(const 
       TVSeriesDetailPage(id: 123)
     ));
 

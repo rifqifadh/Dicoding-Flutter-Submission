@@ -11,7 +11,8 @@ import 'package:movies/movies.dart';
   GetNowPlayingMovies,
   GetTopRatedMovies,
   DatabaseHelper,
-  SearchMovies
+  SearchMovies,
+  Networking
 ], customMocks: [
   MockSpec<http.Client>(as: #MockHttpClient)
 ])

@@ -17,7 +17,7 @@ void main() {
     bloc = MockSearchBloc();
   });
 
-  Widget _makeTestableWidget(Widget body) {
+  Widget makeTestableWidget(Widget body) {
     return BlocProvider<SearchBloc>.value(
       value: bloc,
       child: MaterialApp(
@@ -31,7 +31,7 @@ void main() {
     when(() => bloc.stream).thenAnswer((_) => Stream.value(SearchHasData(testMovieList)));
     when(() => bloc.state).thenReturn(SearchHasData(testMovieList));
 
-    await tester.pumpWidget(_makeTestableWidget(const SearchPage()));
+    await tester.pumpWidget(makeTestableWidget(const SearchPage()));
     await tester.enterText(find.byKey(const Key('search_text_field')), 'Spiderman');
 
     expect(find.byKey(const Key('search_text_field')), findsOneWidget);
@@ -41,7 +41,7 @@ void main() {
     when(() => bloc.stream).thenAnswer((_) => Stream.value(SearchEmpty()));
     when(() => bloc.state).thenReturn(const SearchError('Server Error'));
 
-    await tester.pumpWidget(_makeTestableWidget(const SearchPage()));
+    await tester.pumpWidget(makeTestableWidget(const SearchPage()));
 
     expect(find.byType(Expanded), findsOneWidget);
   });

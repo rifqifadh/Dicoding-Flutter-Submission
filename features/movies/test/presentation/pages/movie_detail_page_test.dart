@@ -22,7 +22,7 @@ void main() {
     nock.cleanAll();
   });
 
-  Widget _makeTestableWidget(Widget body) {
+  Widget makeTestableWidget(Widget body) {
     return BlocProvider<MovieDetailBloc>.value(
       value: mockBloc,
       child: MaterialApp(
@@ -41,7 +41,7 @@ void main() {
 
     final progressBarFinder = find.byType(CircularProgressIndicator);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const MovieDetailPage(
+    await widgetTester.pumpWidget(makeTestableWidget(const MovieDetailPage(
       id: 1,
     )));
 
@@ -58,7 +58,7 @@ void main() {
 
     final progressBarFinder = find.byType(Text);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const MovieDetailPage(
+    await widgetTester.pumpWidget(makeTestableWidget(const MovieDetailPage(
       id: 1,
     )));
 
@@ -76,7 +76,7 @@ void main() {
 
     final movieDetailFinder = find.byType(DetailContent);
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const MovieDetailPage(
+    await widgetTester.pumpWidget(makeTestableWidget(const MovieDetailPage(
       id: 1,
     )));
 
@@ -96,7 +96,7 @@ void main() {
 
     final movieDetailFinder = find.byKey(const Key('recommendation_list'));
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const MovieDetailPage(
+    await widgetTester.pumpWidget(makeTestableWidget(const MovieDetailPage(
       id: 1,
     )));
 
@@ -118,7 +118,7 @@ void main() {
   (Widget widget) => widget is Text && widget.data == 'Server Error',
 );
 
-    await widgetTester.pumpWidget(_makeTestableWidget(const MovieDetailPage(
+    await widgetTester.pumpWidget(makeTestableWidget(const MovieDetailPage(
       id: 1,
     )));
 
@@ -140,7 +140,7 @@ void main() {
 
     final watchlistButtonIcon = find.byIcon(Icons.add);
 
-    await tester.pumpWidget(_makeTestableWidget(const MovieDetailPage(id: 1)));
+    await tester.pumpWidget(makeTestableWidget(const MovieDetailPage(id: 1)));
 
     expect(watchlistButtonIcon, findsOneWidget);
   });
@@ -160,7 +160,7 @@ void main() {
 
     final watchlistButtonIcon = find.byIcon(Icons.check);
 
-    await tester.pumpWidget(_makeTestableWidget(const MovieDetailPage(id: 1)));
+    await tester.pumpWidget(makeTestableWidget(const MovieDetailPage(id: 1)));
 
     expect(watchlistButtonIcon, findsOneWidget);
   });

@@ -3,15 +3,16 @@ import 'package:ditonton/data/repositories/watchlist_repository_impl.dart';
 import 'package:ditonton/domain/repositories/watchlist_repository.dart';
 import 'package:ditonton/domain/usecases/get_watchlist.dart';
 import 'package:ditonton/presentation/bloc/watchlist_bloc.dart';
+import 'package:core/networking/ssl_pinning.dart';
+import 'package:http/io_client.dart';
 import 'package:movies/movies.dart';
 import 'package:core/core.dart';
-import 'package:http/http.dart' as http;
 import 'package:get_it/get_it.dart';
 import 'package:tvseries/tvseries.dart';
 
 final locator = GetIt.instance;
 
-void init() {
+Future<void> init() async {
   // provider
   locator.registerFactory(() => WatchlistBloc(getWatchlist: locator()));
 
@@ -108,5 +109,15 @@ void init() {
   locator.registerLazySingleton<DatabaseHelper>(() => DatabaseHelper());
 
   // external
-  locator.registerLazySingleton(() => http.Client());
+  // locator.registerLazySingleton(() => http.Client());
+  locator.registerLazySingleton<Networking>(() => NetworkingImpl(client: locator()));
+  IOClient ioClient = await SslPinning.ioClient;
+  locator.registerLazySingleton<IOClient>(() => ioClient);
+  // locator.registerSingleton<SSLPinningHelperImpl>(SSLPinningHelperImpl());
+
+  // GetIt.I.registerSingletonAsync<Networking>(() async {
+  //   final sslHelper = GetIt.I<SSLPinningHelperImpl>();
+  //   final client = await sslHelper.getSSLPinningClient();
+  //   return NetworkingImpl(client: client);
+  // });
 }

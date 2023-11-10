@@ -14,7 +14,7 @@ void main() {
     nock.cleanAll();
   });
 
-  Widget _makeTestableWidget(Widget body) {
+  Widget makeTestableWidget(Widget body) {
     return MaterialApp(
       home: Scaffold(
         body: Material(
@@ -25,7 +25,7 @@ void main() {
   }
 
   testWidgets('renders TVSeriesCard', (tester) async {
-    await tester.pumpWidget(_makeTestableWidget(TVSeriesCard(
+    await tester.pumpWidget(makeTestableWidget(TVSeriesCard(
       testTVSeries
     )));
 
@@ -33,7 +33,7 @@ void main() {
   });
 
   testWidgets('displays TV series title', (tester) async {
-    await tester.pumpWidget(_makeTestableWidget(TVSeriesCard(
+    await tester.pumpWidget(makeTestableWidget(TVSeriesCard(
       testTVSeries
     )));
 
@@ -41,7 +41,7 @@ void main() {
   });
 
   testWidgets('displays TV series overview', (tester) async {
-    await tester.pumpWidget(_makeTestableWidget(TVSeriesCard(
+    await tester.pumpWidget(makeTestableWidget(TVSeriesCard(
       testTVSeries
     )));
 
@@ -49,7 +49,7 @@ void main() {
   });
 
   testWidgets('display nextEpisodeToAir with nextEpisodeToAir', (widgetTester) async {
-    await widgetTester.pumpWidget(_makeTestableWidget(TVSeriesCard(
+    await widgetTester.pumpWidget(makeTestableWidget(TVSeriesCard(
       testTVSeriesWithSeason
     )));
 
@@ -58,7 +58,7 @@ void main() {
 
   testWidgets('display nextEpisodeToAir with nextEpisodeToAir.name > 24', (widgetTester) async {
     testTVSeriesWithSeason.nextEpisodeToAir!.name = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
-    await widgetTester.pumpWidget(_makeTestableWidget(TVSeriesCard(
+    await widgetTester.pumpWidget(makeTestableWidget(TVSeriesCard(
       testTVSeriesWithSeason
     )));
 

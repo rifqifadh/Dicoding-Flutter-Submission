@@ -12,8 +12,10 @@ import 'package:provider/provider.dart';
 import 'package:tvseries/tvseries.dart';
 import 'package:ditonton/injection.dart' as di;
 
-void main() {
-  di.init();
+void main() async {
+  WidgetsFlutterBinding
+      .ensureInitialized(); // Ensure flutter binding is initialized
+  await di.init();
   runApp(MyApp());
 }
 
@@ -27,12 +29,12 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => di.locator<MovieDetailBloc>()),
         BlocProvider(create: (_) => di.locator<TopRatedMoviesBloc>()),
         BlocProvider(create: (_) => di.locator<PopularMoviesBloc>()),
-        BlocProvider(create:(_) => di.locator<MovieListBloc>()),
+        BlocProvider(create: (_) => di.locator<MovieListBloc>()),
         BlocProvider(create: (_) => di.locator<TVSeriesListBloc>()),
-        BlocProvider(create:(_) => di.locator<SearchTVSeriesBloc>()),
-        BlocProvider(create:(_) => di.locator<SearchTVSeriesBloc>()),
-        BlocProvider(create:(_) => di.locator<TVSeriesMoreBloc>()),
-        BlocProvider(create:(_) => di.locator<TVSeriesDetailBloc>()),
+        BlocProvider(create: (_) => di.locator<SearchTVSeriesBloc>()),
+        BlocProvider(create: (_) => di.locator<SearchTVSeriesBloc>()),
+        BlocProvider(create: (_) => di.locator<TVSeriesMoreBloc>()),
+        BlocProvider(create: (_) => di.locator<TVSeriesDetailBloc>()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
@@ -62,7 +64,7 @@ class MyApp extends StatelessWidget {
               return MaterialPageRoute(
                 builder: (_) => TVSeriesPage(),
               );
-              case TVSeriesDetailPage.ROUTE_NAME:
+            case TVSeriesDetailPage.ROUTE_NAME:
               final serie = settings.arguments as TVSeries;
               return MaterialPageRoute(
                 builder: (_) => TVSeriesDetailPage(id: serie.id ?? 0),
@@ -78,7 +80,10 @@ class MyApp extends StatelessWidget {
               return CupertinoPageRoute(builder: (_) => SearchTVSeriesPage());
             case TVSeriesMorePage.ROUTE_NAME:
               final type = settings.arguments as TVSeriesMoreType;
-              return CupertinoPageRoute(builder: (_) => TVSeriesMorePage(type: type,));
+              return CupertinoPageRoute(
+                  builder: (_) => TVSeriesMorePage(
+                        type: type,
+                      ));
             default:
               return MaterialPageRoute(builder: (_) {
                 return Scaffold(

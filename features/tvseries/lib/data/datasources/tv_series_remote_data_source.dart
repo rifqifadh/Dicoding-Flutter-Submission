@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:core/core.dart';
-import 'package:http/http.dart' as http;
 import 'package:tvseries/tvseries.dart';
 
 abstract class TVSeriesRemoteDataSource {
@@ -15,7 +14,7 @@ abstract class TVSeriesRemoteDataSource {
 }
 
 class TVSeriesRemoteDataSourceImpl implements TVSeriesRemoteDataSource {
-final http.Client client;
+final Networking client;
 
 TVSeriesRemoteDataSourceImpl({required this.client});
 

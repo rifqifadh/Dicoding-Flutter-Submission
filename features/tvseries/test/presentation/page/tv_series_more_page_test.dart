@@ -17,7 +17,7 @@ void main() {
     bloc = MockTVSeriesMoreBloc();
   });
 
-  Widget _makeTestableWidget(Widget body) {
+  Widget makeTestableWidget(Widget body) {
     return BlocProvider<TVSeriesMoreBloc>.value(
       value: bloc,
       child: MaterialApp(
@@ -35,7 +35,7 @@ void main() {
   
       final progressBarFinder = find.byType(CircularProgressIndicator);
   
-      await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.popular,)));
+      await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.popular,)));
   
       expect(progressBarFinder, findsOneWidget);
     });
@@ -47,7 +47,7 @@ void main() {
   
       final progressBarFinder = find.byType(CircularProgressIndicator);
   
-      await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.popular,)));
+      await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.popular,)));
   
       expect(progressBarFinder, findsOneWidget);
     });
@@ -60,7 +60,7 @@ void main() {
   
       final progressBarFinder = find.byType(CircularProgressIndicator);
   
-      await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.topRated,)));
+      await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.topRated,)));
   
       expect(progressBarFinder, findsOneWidget);
     });
@@ -72,7 +72,7 @@ void main() {
     
         final listViewFinder = find.byType(ListView);
     
-        await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.onTheAir,)));
+        await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.onTheAir,)));
     
         expect(listViewFinder, findsOneWidget);
       });
@@ -85,7 +85,7 @@ void main() {
     
         final textFinder = find.byKey(const Key('error_message'));
     
-        await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.popular,)));
+        await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.popular,)));
     
         expect(textFinder, findsOneWidget);
       });
@@ -98,7 +98,7 @@ void main() {
     
         final containerFinder = find.byType(Container);
     
-        await widgetTester.pumpWidget(_makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.popular,)));
+        await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.popular,)));
     
         expect(containerFinder, findsOneWidget);
       });

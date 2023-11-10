@@ -1,8 +1,6 @@
 import 'package:core/core.dart';
 import 'package:ditonton/domain/entities/watchlist.dart';
 import 'package:equatable/equatable.dart';
-import 'package:movies/domain/entities/movie_detail.dart';
-import 'package:tvseries/tvseries.dart';
 
 class WatchlistTable extends WatchlistTableInterface with EquatableMixin {
   final int id;
