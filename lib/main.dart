@@ -4,6 +4,7 @@ import 'package:about/about.dart';
 import 'package:ditonton/presentation/bloc/watchlist_bloc.dart';
 import 'package:ditonton/presentation/pages/home_movie_page.dart';
 import 'package:ditonton/presentation/pages/watchlist_page.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies/movies.dart';
 import 'package:flutter/cupertino.dart';
@@ -11,11 +12,15 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tvseries/tvseries.dart';
 import 'package:ditonton/injection.dart' as di;
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding
       .ensureInitialized(); // Ensure flutter binding is initialized
   await di.init();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  FlutterError.onError = FirebaseCrashlytics .instance.recordFlutterFatalError;
   runApp(MyApp());
 }
 

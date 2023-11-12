@@ -54,7 +54,7 @@ class TVSeriesDetailContent extends StatelessWidget {
   final TVSeriesDetail tvSeries;
   final bool isAddedWatchlist;
 
-  TVSeriesDetailContent(
+  const TVSeriesDetailContent(
       {super.key, required this.tvSeries, required this.isAddedWatchlist});
 
   @override
