@@ -1,21 +1,7 @@
 
 import 'package:core/database_helper/database_helper.dart';
 import 'package:tvseries/data/models/next_episode_to_air_model.dart';
-import 'package:tvseries/domain/entities/watchlist.dart';
 import 'package:tvseries/tvseries.dart';
-
-final testWatchlistList = [testWatchlist];
-
-const testWatchlist = Watchlist(
-    id: 1,
-    title: 'title',
-    posterPath: 'posterPath',
-    overview: 'overview',
-    nextEpisode: 1,
-    nextEpisodeToAir: 'nextEpisodeToAir',
-    nextEpisodeName: 'nextEpisodeName',
-    seasonNumber: 1,
-    type: WatchlistType.tvSeries);
 
 final testTVSeriesTable = WatchlistTable(
     id: 1,

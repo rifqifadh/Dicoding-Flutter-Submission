@@ -1,7 +1,6 @@
 import 'package:core/core.dart';
 import 'package:equatable/equatable.dart';
 import 'package:tvseries/domain/entities/tv_series_detail.dart';
-import 'package:tvseries/domain/entities/watchlist.dart';
 
 class WatchlistTable extends WatchlistTableInterface with EquatableMixin {
   WatchlistTable({
@@ -64,19 +63,7 @@ class WatchlistTable extends WatchlistTableInterface with EquatableMixin {
         'seasonNumber': seasonNumber,
         'type': type?.name.toString() ?? 'movie',
       };
-
-  Watchlist toEntity() => Watchlist(
-        id: id ?? 0,
-        overview: overview ?? '',
-        posterPath: posterPath ?? '',
-        title: title ?? '',
-        nextEpisode: nextEpisode ?? 0,
-        nextEpisodeToAir: nextEpisodeToAir ?? '',
-        nextEpisodeName: nextEpisodeName ?? '',
-        seasonNumber: seasonNumber ?? 0,
-        type: type ?? WatchlistType.movie,
-      );
-
+      
   @override
   List<Object?> get props => [id, title, posterPath, overview];
 }

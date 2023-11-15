@@ -80,10 +80,15 @@ class MovieDetailBloc extends Bloc<MovieDetailEvent, MovieDetailState> {
     });
   }
 
- void watchlistResult(Either<Failure, String> result, OnButtonWatchlistTapped event, Emitter<MovieDetailState> emit, bool isAdded) {
+  void watchlistResult(
+      Either<Failure, String> result,
+      OnButtonWatchlistTapped event,
+      Emitter<MovieDetailState> emit,
+      bool isAdded) {
     result.fold(
       (failure) {
-        emit(state.copyWith(isAddedToWatchlist: false, watchlistMessage: failure.message));
+        emit(state.copyWith(
+            isAddedToWatchlist: false, watchlistMessage: failure.message));
       },
       (value) {
         emit(state.copyWith(
