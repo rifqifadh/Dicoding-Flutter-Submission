@@ -40,6 +40,7 @@ Future<void> init() async {
         getTopRatedTVSeries: locator(),
         getAirTodayTVSeries: locator(),
         getPopularTVSeries: locator(),
+        getOnTheAirTVSeries: locator()
       ));
   locator.registerFactory(() => TVSeriesDetailBloc(
         getTVSeriesDetail: locator(),
