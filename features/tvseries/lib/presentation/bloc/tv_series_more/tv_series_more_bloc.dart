@@ -11,11 +11,13 @@ class TVSeriesMoreBloc extends Bloc<TVSeriesMoreEvent, TVSeriesMoreState> {
   final GetTopRatedTVSeries getTopRatedTVSeries;
   final GetAirTodayTVSeries getAirTodayTVSeries;
   final GetPopularTVSeries getPopularTVSeries;
+  final GetOnTheAirTVSeries getOnTheAirTVSeries;
 
   TVSeriesMoreBloc({
     required this.getTopRatedTVSeries,
     required this.getAirTodayTVSeries,
     required this.getPopularTVSeries,
+    required this.getOnTheAirTVSeries,
   }) : super(TVSeriesMoreEmpty()) {
     on<OnInitialFetchTVSeriesMore>((event, emit) async {
       final type = event.type;
@@ -26,6 +28,8 @@ class TVSeriesMoreBloc extends Bloc<TVSeriesMoreEvent, TVSeriesMoreState> {
         result = await getTopRatedTVSeries.execute();
       } else if (type == TVSeriesMoreType.airingToday) {
         result = await getAirTodayTVSeries.execute();
+      } else if (type == TVSeriesMoreType.onTheAir) {
+        result = await getOnTheAirTVSeries.execute();
       } else {
         result = await getPopularTVSeries.execute();
       }

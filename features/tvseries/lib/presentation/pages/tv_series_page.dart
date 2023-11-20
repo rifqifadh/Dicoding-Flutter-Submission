@@ -42,10 +42,13 @@ class _TVSeriesPageState extends State<TVSeriesPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'On The Air',
-                style: kHeading6,
-              ),
+              _buildSubHeading(
+                  onTap: () {
+                    Navigator.pushNamed(
+                              context, TVSeriesMorePage.ROUTE_NAME,
+                              arguments: TVSeriesMoreType.onTheAir);
+                  },
+                  title: 'On The Air'),
               BlocBuilder<TVSeriesListBloc, TVSeriesListState>(
                 builder: (context, state) {
                 if (state.onTheAirTVSeriesState == RequestState.Loading) {

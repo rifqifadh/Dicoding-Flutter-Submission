@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -26,80 +24,128 @@ void main() {
     );
   }
 
-
-  testWidgets('Page should display center progress bar when loading with popular type',
-   (WidgetTester widgetTester) async {
-      when(() => bloc.stream)
-      .thenAnswer((_) => Stream.value(TVSeriesMoreEmpty()));
-      when(() => bloc.state).thenReturn(TVSeriesMoreLoading());
-  
-      final progressBarFinder = find.byType(CircularProgressIndicator);
-  
-      await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.popular,)));
-  
-      expect(progressBarFinder, findsOneWidget);
-    });
-  testWidgets('Page should display center progress bar when loading',
-   (WidgetTester widgetTester) async {
-      when(() => bloc.stream)
-      .thenAnswer((_) => Stream.value(TVSeriesMoreEmpty()));
-      when(() => bloc.state).thenReturn(TVSeriesMoreLoading());
-  
-      final progressBarFinder = find.byType(CircularProgressIndicator);
-  
-      await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.popular,)));
-  
-      expect(progressBarFinder, findsOneWidget);
-    });
-
-  testWidgets('Page should display center progress bar when loading with topRated type',
-   (WidgetTester widgetTester) async {
-      when(() => bloc.stream)
-      .thenAnswer((_) => Stream.value(TVSeriesMoreEmpty()));
-      when(() => bloc.state).thenReturn(TVSeriesMoreLoading());
-  
-      final progressBarFinder = find.byType(CircularProgressIndicator);
-  
-      await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.topRated,)));
-  
-      expect(progressBarFinder, findsOneWidget);
-    });
-  testWidgets('Page should display ListView when data is loaded with onTheAir type',
-    (WidgetTester widgetTester) async {
-        when(() => bloc.stream)
+  testWidgets(
+      'Page should display center progress bar when loading with popular type',
+      (WidgetTester widgetTester) async {
+    when(() => bloc.stream)
         .thenAnswer((_) => Stream.value(TVSeriesMoreEmpty()));
-        when(() => bloc.state).thenReturn(TVSeriesMoreLoaded(testTVSeriesList));
-    
-        final listViewFinder = find.byType(ListView);
-    
-        await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.onTheAir,)));
-    
-        expect(listViewFinder, findsOneWidget);
-      });
+    when(() => bloc.state).thenReturn(TVSeriesMoreLoading());
+
+    final progressBarFinder = find.byType(CircularProgressIndicator);
+
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(
+      type: TVSeriesMoreType.popular,
+    )));
+
+    expect(progressBarFinder, findsOneWidget);
+  });
+  testWidgets('Page should display center progress bar when loading',
+      (WidgetTester widgetTester) async {
+    when(() => bloc.stream)
+        .thenAnswer((_) => Stream.value(TVSeriesMoreEmpty()));
+    when(() => bloc.state).thenReturn(TVSeriesMoreLoading());
+
+    final progressBarFinder = find.byType(CircularProgressIndicator);
+
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(
+      type: TVSeriesMoreType.popular,
+    )));
+
+    expect(progressBarFinder, findsOneWidget);
+  });
+
+  testWidgets(
+      'Page should display center progress bar when loading with topRated type',
+      (WidgetTester widgetTester) async {
+    when(() => bloc.stream)
+        .thenAnswer((_) => Stream.value(TVSeriesMoreEmpty()));
+    when(() => bloc.state).thenReturn(TVSeriesMoreLoading());
+
+    final progressBarFinder = find.byType(CircularProgressIndicator);
+
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(
+      type: TVSeriesMoreType.topRated,
+    )));
+
+    expect(progressBarFinder, findsOneWidget);
+  });
+  testWidgets(
+      'Page should display ListView when data is loaded with onTheAir type',
+      (WidgetTester widgetTester) async {
+    when(() => bloc.stream)
+        .thenAnswer((_) => Stream.value(TVSeriesMoreEmpty()));
+    when(() => bloc.state).thenReturn(TVSeriesMoreLoaded(testTVSeriesList));
+
+    final listViewFinder = find.byType(ListView);
+
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(
+      type: TVSeriesMoreType.onTheAir,
+    )));
+
+    expect(listViewFinder, findsOneWidget);
+  });
 
   testWidgets('Page should display error message when data is loaded',
-    (WidgetTester widgetTester) async {
-        when(() => bloc.stream)
+      (WidgetTester widgetTester) async {
+    when(() => bloc.stream)
         .thenAnswer((_) => Stream.value(TVSeriesMoreEmpty()));
-        when(() => bloc.state).thenReturn(const TVSeriesMoreError('Error'));
-    
-        final textFinder = find.byKey(const Key('error_message'));
-    
-        await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.popular,)));
-    
-        expect(textFinder, findsOneWidget);
-      });
+    when(() => bloc.state).thenReturn(const TVSeriesMoreError('Error'));
+
+    final textFinder = find.byKey(const Key('error_message'));
+
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(
+      type: TVSeriesMoreType.popular,
+    )));
+
+    expect(textFinder, findsOneWidget);
+  });
 
   testWidgets('Page should display empty container when data is loaded',
-    (WidgetTester widgetTester) async {
-        when(() => bloc.stream)
+      (WidgetTester widgetTester) async {
+    when(() => bloc.stream)
         .thenAnswer((_) => Stream.value(TVSeriesMoreEmpty()));
-        when(() => bloc.state).thenReturn(TVSeriesMoreEmpty());
-    
-        final containerFinder = find.byType(Container);
-    
-        await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(type: TVSeriesMoreType.popular,)));
-    
-        expect(containerFinder, findsOneWidget);
-      });
+    when(() => bloc.state).thenReturn(TVSeriesMoreEmpty());
+
+    final containerFinder = find.byType(Container);
+
+    await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(
+      type: TVSeriesMoreType.popular,
+    )));
+
+    expect(containerFinder, findsOneWidget);
+  });
+
+  testWidgets(
+    'Page should display ListView when data is loaded with airingToday type',
+    (WidgetTester widgetTester) async {
+      when(() => bloc.stream)
+          .thenAnswer((_) => Stream.value(TVSeriesMoreEmpty()));
+      when(() => bloc.state).thenReturn(TVSeriesMoreLoaded(testTVSeriesList));
+
+      final listViewFinder = find.byType(ListView);
+
+      await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(
+        type: TVSeriesMoreType.airingToday,
+      )));
+
+      expect(listViewFinder, findsOneWidget);
+    },
+  );
+
+  testWidgets(
+    'Page should display ListView when data is loaded with topRated type',
+    (WidgetTester widgetTester) async {
+      when(() => bloc.stream)
+          .thenAnswer((_) => Stream.value(TVSeriesMoreEmpty()));
+      when(() => bloc.state).thenReturn(TVSeriesMoreLoaded(testTVSeriesList));
+
+      final listViewFinder = find.byType(ListView);
+
+      await widgetTester.pumpWidget(makeTestableWidget(const TVSeriesMorePage(
+        type: TVSeriesMoreType.topRated,
+      )));
+
+      expect(listViewFinder, findsOneWidget);
+    },
+  );
 }
